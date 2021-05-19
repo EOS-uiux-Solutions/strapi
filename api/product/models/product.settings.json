@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "name": "Product"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "user_stories": {
+      "via": "product",
+      "collection": "user-story"
+    },
+    "Description": {
+      "type": "richtext",
+      "required": true
+    },
+    "websiteUrl": {
+      "type": "string"
+    },
+    "repoUrl": {
+      "type": "string"
+    }
+  }
+}

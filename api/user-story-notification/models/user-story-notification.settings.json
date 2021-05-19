@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_story_notifications",
+  "info": {
+    "name": "User Story Notification"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "message": {
+      "type": "string",
+      "unique": true
+    },
+    "date": {
+      "type": "datetime"
+    },
+    "users": {
+      "plugin": "users-permissions",
+      "collection": "user"
+    },
+    "seenBy": {
+      "unique": true,
+      "plugin": "users-permissions",
+      "collection": "user"
+    },
+    "link": {
+      "type": "string"
+    }
+  }
+}

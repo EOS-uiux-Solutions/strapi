@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_story_statuses",
+  "info": {
+    "name": "User Story Status"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Status": {
+      "type": "string",
+      "required": true
+    },
+    "user_stories": {
+      "via": "user_story_status",
+      "collection": "user-story"
+    }
+  }
+}

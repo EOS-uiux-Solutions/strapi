@@ -1,0 +1,45 @@
+stages:
+  - deploy
+
+image: node:10.15.0
+
+deploy_production:
+  stage: deploy
+  image: ruby:latest
+  environment:
+    name: production
+    url: https://$HEROKU_SERVER_PROD.herokuapp.com/
+  script:
+    - apt-get update -qy
+    - apt-get install -y ruby-dev
+    - gem install dpl
+    - dpl --provider=heroku --app=$HEROKU_SERVER_PROD --api-key=$HEROKU_API
+  when: manual
+  only:
+    - master
+
+deploy_development:
+  stage: deploy
+  image: ruby:latest
+  environment:
+    name: development
+    url: https://$HEROKU_SERVER_DEV.herokuapp.com/
+  script:
+    - apt-get update -qy
+    - apt-get install -y ruby-dev
+    - gem install dpl
+    - dpl --provider=heroku --app=$HEROKU_SERVER_DEV --api-key=$HEROKU_API
+  only:
+    - master
+
+docker_registry:
+  image: docker:19.03.12
+  stage: deploy
+  services:
+    - docker:19.03.12-dind
+  script:
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+    - docker build -t $CI_REGISTRY/suse-uiux/eos-strapi/development:latest .
+    - docker push $CI_REGISTRY/suse-uiux/eos-strapi/development:latest
+  only:
+    - master

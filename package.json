@@ -1,0 +1,38 @@
+{
+  "name": "eos-strapi-new",
+  "private": false,
+  "version": "0.1.0",
+  "description": "A Strapi application configured for EOS solutions",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi"
+  },
+  "dependencies": {
+    "strapi": "3.0.1",
+    "strapi-admin": "3.0.1",
+    "strapi-connector-mongoose": "3.0.1",
+    "strapi-plugin-content-manager": "3.0.1",
+    "strapi-plugin-content-type-builder": "3.0.1",
+    "strapi-plugin-documentation": "^3.0.1",
+    "strapi-plugin-email": "3.0.1",
+    "strapi-plugin-graphql": "^3.0.1",
+    "strapi-plugin-upload": "3.0.1",
+    "strapi-plugin-users-permissions": "3.0.1",
+    "strapi-provider-email-sendgrid": "^3.0.2",
+    "strapi-provider-upload-cloudinary": "^3.0.4",
+    "strapi-utils": "3.0.1"
+  },
+  "author": {
+    "name": "EOS"
+  },
+  "strapi": {
+    "uuid": "59f3a718-1a0c-40d7-a3f1-cbb1c160687b"
+  },
+  "engines": {
+    "node": ">=10.15.0",
+    "npm": ">=6.9.0"
+  },
+  "license": "MIT"
+}

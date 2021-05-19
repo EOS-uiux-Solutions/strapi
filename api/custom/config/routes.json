@@ -1,0 +1,17 @@
+{
+    "routes": [
+      {
+        "method": "POST",
+        "path": "/logout",
+        "handler": "Custom.logout"
+      },
+      {
+        "method": "POST",
+        "path": "/checkAuthor",
+        "handler": "Custom.checkAuthor",
+        "config": {
+          "policies": ["plugins::users-permissions.permissions"]
+        }
+      }
+    ]
+}

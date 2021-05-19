@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_story_comment_threads",
+  "info": {
+    "name": "User Story Comment Reply"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Comments": {
+      "type": "richtext"
+    },
+    "user_story_comment": {
+      "model": "user-story-comment",
+      "via": "user_story_comment_replies"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "user_story_comment_replies"
+    }
+  }
+}

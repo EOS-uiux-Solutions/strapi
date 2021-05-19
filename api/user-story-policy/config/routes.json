@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/user-story-policies",
+      "handler": "user-story-policy.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/user-story-policies/count",
+      "handler": "user-story-policy.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/user-story-policies/:id",
+      "handler": "user-story-policy.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/user-story-policies",
+      "handler": "user-story-policy.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/user-story-policies/:id",
+      "handler": "user-story-policy.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/user-story-policies/:id",
+      "handler": "user-story-policy.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

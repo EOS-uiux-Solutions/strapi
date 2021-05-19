@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/user-story-statuses",
+      "handler": "user-story-status.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/user-story-statuses/count",
+      "handler": "user-story-status.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/user-story-statuses/:id",
+      "handler": "user-story-status.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/user-story-statuses",
+      "handler": "user-story-status.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/user-story-statuses/:id",
+      "handler": "user-story-status.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/user-story-statuses/:id",
+      "handler": "user-story-status.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

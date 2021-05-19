@@ -1,0 +1,97 @@
+{
+  "kind": "collectionType",
+  "collectionName": "users-permissions_user",
+  "info": {
+    "name": "user",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "username": {
+      "type": "string",
+      "minLength": 3,
+      "unique": true,
+      "configurable": false,
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "minLength": 6,
+      "configurable": false,
+      "required": true
+    },
+    "provider": {
+      "type": "string",
+      "configurable": false
+    },
+    "password": {
+      "type": "password",
+      "minLength": 6,
+      "configurable": false,
+      "private": true
+    },
+    "resetPasswordToken": {
+      "type": "string",
+      "configurable": false,
+      "private": true
+    },
+    "confirmed": {
+      "type": "boolean",
+      "default": false,
+      "configurable": false
+    },
+    "blocked": {
+      "type": "boolean",
+      "default": false,
+      "configurable": false
+    },
+    "role": {
+      "model": "role",
+      "via": "users",
+      "plugin": "users-permissions",
+      "configurable": false
+    },
+    "profilePicture": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "Bio": {
+      "type": "text"
+    },
+    "LinkedIn": {
+      "type": "string"
+    },
+    "Twitter": {
+      "type": "string"
+    },
+    "Name": {
+      "type": "string",
+      "required": false
+    },
+    "Profession": {
+      "type": "string"
+    },
+    "Company": {
+      "type": "string"
+    },
+    "user_story_comments": {
+      "via": "user",
+      "collection": "user-story-comment"
+    },
+    "user_stories": {
+      "via": "author",
+      "collection": "user-story"
+    },
+    "user_story_comment_replies": {
+      "via": "user",
+      "collection": "user-story-comment-thread"
+    }
+  }
+}

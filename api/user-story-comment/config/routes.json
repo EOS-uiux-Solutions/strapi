@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/user-story-comments",
+      "handler": "user-story-comment.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/user-story-comments/count",
+      "handler": "user-story-comment.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/user-story-comments/:id",
+      "handler": "user-story-comment.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/user-story-comments",
+      "handler": "user-story-comment.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/user-story-comments/:id",
+      "handler": "user-story-comment.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/user-story-comments/:id",
+      "handler": "user-story-comment.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

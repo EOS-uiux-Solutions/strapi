@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/user-story-notifications",
+      "handler": "user-story-notification.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/user-story-notifications/count",
+      "handler": "user-story-notification.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/user-story-notifications/:id",
+      "handler": "user-story-notification.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/user-story-notifications",
+      "handler": "user-story-notification.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/user-story-notifications/:id",
+      "handler": "user-story-notification.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/user-story-notifications/:id",
+      "handler": "user-story-notification.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

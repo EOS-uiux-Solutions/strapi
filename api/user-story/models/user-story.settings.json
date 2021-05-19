@@ -1,0 +1,76 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_stories",
+  "info": {
+    "name": "User Story"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Category": {
+      "type": "enumeration",
+      "enum": [
+        "Accessibility",
+        "Documentation",
+        "Bug",
+        "Performance",
+        "User_experience",
+        "User_Interface"
+      ],
+      "required": true
+    },
+    "Description": {
+      "type": "richtext",
+      "required": true
+    },
+    "Title": {
+      "type": "string",
+      "unique": true
+    },
+    "Attachment": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "author": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "user_stories"
+    },
+    "user_story_status": {
+      "model": "user-story-status",
+      "via": "user_stories"
+    },
+    "user_story_comments": {
+      "collection": "user-story-comment",
+      "via": "user_story"
+    },
+    "product": {
+      "model": "product",
+      "via": "user_stories"
+    },
+    "followers": {
+      "unique": true,
+      "plugin": "users-permissions",
+      "collection": "user"
+    },
+    "Priority": {
+      "type": "enumeration",
+      "enum": [
+        "Low",
+        "Moderate",
+        "High",
+        "Critical"
+      ],
+      "required": true
+    }
+  }
+}

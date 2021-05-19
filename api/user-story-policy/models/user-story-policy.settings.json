@@ -1,0 +1,16 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_story_policies",
+  "info": {
+    "name": "User Story Policy"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Description": {
+      "type": "richtext"
+    }
+  }
+}
