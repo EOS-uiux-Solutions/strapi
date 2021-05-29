@@ -15,8 +15,8 @@ jobs:
       - name: Build and Push to GitHub Container Registry
         uses: mr-smithers-excellent/docker-build-push@v5
         with:
-          image: ghcr.io/sundeepchand/strapi
+          image: ghcr.io/eos/strapi
           registry: ghcr.io
-          githubOrg: SundeepChand
-          username: ${{ github.actor }}
+          githubOrg: EOS-uiux-Solutions
+          username: ${{ secrets.GHCR_USERNAME }}
           password: ${{ secrets.PAT }}
