@@ -3,7 +3,7 @@ name: Publish Container
 on:
   push:
     branches:
-      - ops/workflow
+      - main
 
 jobs:
   publish-image:
@@ -15,8 +15,8 @@ jobs:
       - name: Build and Push to GitHub Container Registry
         uses: mr-smithers-excellent/docker-build-push@v5
         with:
-          image: ghcr.io/eos/strapi
+          image: ghcr.io/eos-uiux-solutions/strapi
           registry: ghcr.io
           githubOrg: EOS-uiux-Solutions
           username: ${{ secrets.GHCR_USERNAME }}
-          password: ${{ secrets.PAT }}
+          password: ${{ secrets.GHCR_PASSWORD }}
