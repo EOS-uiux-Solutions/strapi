@@ -1,0 +1,22 @@
+name: Publish Container
+
+on:
+  push:
+    branches:
+      - ops/workflow
+
+jobs:
+  publish-image:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Build and Push to GitHub Container Registry
+        uses: mr-smithers-excellent/docker-build-push@v5
+        with:
+          image: ghcr.io/sundeepchand/strapi
+          registry: ghcr.io
+          githubOrg: SundeepChand
+          username: ${{ github.actor }}
+          password: ${{ secrets.PAT }}
