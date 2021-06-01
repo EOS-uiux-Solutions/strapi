@@ -1,0 +1,28 @@
+{
+  "statuses": [
+    {
+      "Status": "Implementing",
+      "user_stories": []
+    },
+    {
+      "Status": "Designing",
+      "user_stories": []
+    },
+    {
+      "Status": "Deployed",
+      "user_stories": []
+    },
+    {
+      "Status": "Planned",
+      "user_stories": []
+    },
+    {
+      "Status": "Under consideration",
+      "user_stories": []
+    },
+    {
+      "Status": "Testing",
+      "user_stories": []
+    }
+  ]
+}
