@@ -3,7 +3,7 @@ name: Publish Container
 on:
   push:
     branches:
-      - main
+      - tests/bootstrap
 
 jobs:
   publish-image:
