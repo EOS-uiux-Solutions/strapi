@@ -163,7 +163,6 @@ module.exports = async () => {
     if (process.env.NODE_ENV === 'test') {
       await insertAllItems()
     } else if (process.env.NODE_ENV === 'development') {
-      console.log('Here')
       insertStatuses()
     }
   }
