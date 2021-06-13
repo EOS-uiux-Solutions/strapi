@@ -12,37 +12,9 @@
 // const fs = require('fs')
 const { products, userStories, comments, users, statuses } = require('../../data/data.json')
 
-const fetchProducts = async () => {
-  const products = await strapi.query('product').find({})
-  console.log(JSON.stringify(products))
-  // fs.writeFileSync('product-data.json', JSON.stringify(products))
-}
-
-const fetchStories = async () => {
-  const stories = await strapi.query('user-story').find({})
-  console.log(JSON.stringify(stories))
-}
-
-const fetchComments = async () => {
-  const comments = await strapi.query('user-story-comment').find({})
-  console.log(JSON.stringify(comments))
-}
-
-const fetchUsers = async () => {
-  // console.log(strapi.plugins['users-permissions'].services.user.add({...}))
-  const users = await strapi.plugins['users-permissions'].services.user.fetchAll()
-  console.log(JSON.stringify(users))
-}
-
-const fetchStatus = async () => {
-  const status = await strapi.query('user-story-status').find({})
-  console.log(JSON.stringify(status))
-}
-
-const fetchRoles = async () => {
-  // strapi.plugins['users-permissions'].services.userspermissions.createRole()
-  const roles = await strapi.plugins['users-permissions'].services.userspermissions.getRoles()
-  console.log(JSON.stringify(roles))
+const insertStatuses = async () => {
+  await Promise.all(statuses.map(status => strapi.query('user-story-status').create(status)))
+  console.log('Inserted statuses')
 }
 
 const insertAllItems = async () => {
@@ -51,8 +23,7 @@ const insertAllItems = async () => {
   await Promise.all(products.map(product => strapi.query('product').create(product)))
   console.log('Inserted products')
 
-  await Promise.all(statuses.map(status => strapi.query('user-story-status').create(status)))
-  console.log('Inserted statuses')
+  insertStatuses()
 
   await Promise.all(userStories.map(userStory => strapi.query('user-story').create(userStory)))
   console.log('Inserted stories')
@@ -73,7 +44,7 @@ const insertAllItems = async () => {
 const setUsersPermissions = async () => {
   const publicPermissions = {
     auth: ['callback', 'connect', 'emailconfirmation', 'forgotpassword', 'register'],
-    user: ['findone', 'me']
+    user: ['find', 'findone', 'me']
   }
 
   const authPermissions = {
@@ -90,24 +61,18 @@ const setUsersPermissions = async () => {
     let toEnable = false
     if (permission.role == authenticatedId) {
       if (permission.controller === 'auth' && authPermissions.auth.includes(permission.action)) {
-        // Enable
         toEnable = true
       } else if (permission.controller === 'user' && authPermissions.user.includes(permission.action)) {
-        // Enable
         toEnable = true
       }
     } else if (permission.role == publicId) {
       if (permission.controller === 'auth' && publicPermissions.auth.includes(permission.action)) {
-        // Enable
         toEnable = true
       } else if (permission.controller === 'user' && publicPermissions.user.includes(permission.action)) {
-        // Enable
         toEnable = true
       }
     }
     if (toEnable) {
-      // Update to set enable to true
-      console.log(permission)
       permission.enabled = true
       await strapi.query('permission', 'users-permissions').update(
         { id: permission.id },
@@ -143,6 +108,7 @@ const setCollectionPermissions = async () => {
     'user-story-status': ['find', 'findone'],
     'user-story-policy': ['find', 'findone'],
     'product': ['find', 'findone'],
+    'custom': ['checkauthor'],
     'successes': ['find', 'findone'],
     'user-story-comment-thread': ['find', 'findone'],
     'user-story': ['count', 'find', 'findone', 'create', 'update']
@@ -155,7 +121,6 @@ const setCollectionPermissions = async () => {
         publicPermissions[permission.controller] &&
         publicPermissions[permission.controller].includes(permission.action)
       ) {
-        // Enable
         toEnable = true
       }
     } else if (permission.role == authenticatedId) {
@@ -163,22 +128,17 @@ const setCollectionPermissions = async () => {
         authenticatedPermissions[permission.controller] &&
         authenticatedPermissions[permission.controller].includes(permission.action)
       ) {
-        // Enable
         toEnable = true
       }
     }
 
     if (toEnable) {
-      console.log(permission)
       await strapi.query('permission', 'users-permissions').update(
         { id: permission.id },
         { enabled: true }
       )
     }
   })
-
-  // console.log(applicationPermissions)
-  // console.log(applicationPermissions.length)
 }
 
 const isFirstRun = async () => {
@@ -195,9 +155,16 @@ const isFirstRun = async () => {
 module.exports = async () => {
   const shouldInitStrapi = await isFirstRun()
 
-  if (shouldInitStrapi && process.env.NODE_ENV === 'test') {
+  if (shouldInitStrapi) {
+    console.log('Running strapi for the first time')
     await setCollectionPermissions()
     await setUsersPermissions()
-    await insertAllItems()
+
+    if (process.env.NODE_ENV === 'test') {
+      await insertAllItems()
+    } else if (process.env.NODE_ENV === 'development') {
+      console.log('Here')
+      insertStatuses()
+    }
   }
 };
