@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-      - tests/bootstrap
 
 jobs:
   publish-image:
@@ -34,6 +33,6 @@ jobs:
           image: ghcr.io/eos-uiux-solutions/strapi
           registry: ghcr.io
           dockerfile: Dockerfile.test
-          githubOrg: SundeepChand
+          githubOrg: EOS-uiux-Solutions
           username: ${{ secrets.GHCR_USERNAME }}
-          password: ${{ secrets.PAT }}
+          password: ${{ secrets.GHCR_PASSWORD }}
