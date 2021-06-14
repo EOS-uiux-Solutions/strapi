@@ -1,6 +1,6 @@
 FROM node:12.13.0-alpine
 
-LABEL org.opencontainers.image.source="https://github.com/SundeepChand/strapi"
+LABEL org.opencontainers.image.source="https://github.com/EOS-uiux-Solutions/strapi"
 
 WORKDIR /usr/src/app
 
