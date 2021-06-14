@@ -34,6 +34,6 @@ jobs:
           image: ghcr.io/eos-uiux-solutions/strapi
           registry: ghcr.io
           dockerfile: Dockerfile.test
-          githubOrg: EOS-uiux-Solutions
+          githubOrg: SundeepChand
           username: ${{ secrets.GHCR_USERNAME }}
           password: ${{ secrets.PAT }}
