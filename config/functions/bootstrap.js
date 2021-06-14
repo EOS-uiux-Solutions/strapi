@@ -9,12 +9,16 @@
  *
  * See more details here: https://strapi.io/documentation/v3.x/concepts/configurations.html#bootstrap
  */
-// const fs = require('fs')
 const { products, userStories, comments, users, statuses } = require('../../data/data.json')
 
 const insertStatuses = async () => {
-  await Promise.all(statuses.map(status => strapi.query('user-story-status').create(status)))
-  console.log('Inserted statuses')
+  const lenStatuses = await strapi.query('user-story-status').count({})
+  if (lenStatuses <= 0) {
+    await Promise.all(statuses.map(status => strapi.query('user-story-status').create(status)))
+    console.log('Inserted statuses')
+  } else {
+    console.log('Statuses already exist.')
+  }
 }
 
 const insertAllItems = async () => {
@@ -156,13 +160,13 @@ module.exports = async () => {
   const shouldInitStrapi = await isFirstRun()
 
   if (shouldInitStrapi) {
-    console.log('Running strapi for the first time')
+    console.log('Looks like you are running strapi for the first time. Initialising the database.')
     await setCollectionPermissions()
     await setUsersPermissions()
 
     if (process.env.NODE_ENV === 'test') {
-      await insertAllItems()
-    } else if (process.env.NODE_ENV === 'development') {
+      insertAllItems()
+    } else {
       insertStatuses()
     }
   }
