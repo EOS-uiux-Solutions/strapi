@@ -20,3 +20,19 @@ jobs:
           githubOrg: EOS-uiux-Solutions
           username: ${{ secrets.GHCR_USERNAME }}
           password: ${{ secrets.GHCR_PASSWORD }}
+
+  publish-test-image:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Build and Push the Test Image to GitHub Container Registry
+        uses: mr-smithers-excellent/docker-build-push@v5
+        with:
+          image: ghcr.io/eos-uiux-solutions/strapi-test
+          registry: ghcr.io
+          dockerfile: Dockerfile.test
+          githubOrg: EOS-uiux-Solutions
+          username: ${{ secrets.GHCR_USERNAME }}
+          password: ${{ secrets.GHCR_PASSWORD }}

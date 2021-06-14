@@ -1,0 +1,243 @@
+{
+  "products": [
+    {
+      "Name": "EOS Icons",
+      "Description": "A collection of more than 1000 free icons, all open-source.",
+      "websiteUrl": "https://eos-icons.com/",
+      "repoUrl": "https://gitlab.com/SUSE-UIUX/eos-icons-landing",
+      "user_stories": ["6090320d243af806c8637fdf", "60903337243af806c8637fe3"],
+      "id": "609031b0243af806c8637fde"
+    },
+    {
+      "Name": "EOS User Story",
+      "Description": "A platform to discuss new features for your products.",
+      "websiteUrl": "https://userstory.eosdesignsystem.com/",
+      "repoUrl": "https://gitlab.com/SUSE-UIUX/eos-user-story",
+      "user_stories": ["6090330d243af806c8637fe2", "6090345b243af806c8637fe4"],
+      "id": "609032d4243af806c8637fe1"
+    }
+  ],
+  "userStories": [
+    {
+      "Category": "User_experience",
+      "Priority": "High",
+      "Attachment": [],
+      "followers": ["6090327b243af806c8637fe0"],
+      "Description": "<p>Expanding the icons set <strong>would</strong> be essential.</p>",
+      "Title": "Add more icons",
+      "author": "60903131243af806c8637fdd",
+      "product": "609031b0243af806c8637fde",
+      "user_story_status": "605ef6fed9e8ff3f5c2ee489",
+      "user_story_comments": ["609034f7243af806c8637fe5"],
+      "id": "6090320d243af806c8637fdf"
+    },
+    {
+      "Category": "User_experience",
+      "Priority": "Critical",
+      "Attachment": [],
+      "followers": [],
+      "Description": "<p>The&nbsp;current&nbsp;login&nbsp;process&nbsp;can&nbsp;be&nbsp;improved&nbsp;by&nbsp;a&nbsp;huge&nbsp;factor.</p>",
+      "Title": "Add OAuth Login",
+      "author": "6090327b243af806c8637fe0",
+      "product": "609032d4243af806c8637fe1",
+      "user_story_status": "605ef6e6d9e8ff3f5c2ee486",
+      "user_story_comments": [],
+      "id": "6090330d243af806c8637fe2"
+    },
+    {
+      "Category": "User_experience",
+      "Priority": "High",
+      "Attachment": [],
+      "followers": [],
+      "Description": "<p>The&nbsp;icon&nbsp;search&nbsp;needs&nbsp;improvement</p>",
+      "Title": "Improve Icons search",
+      "author": "6090327b243af806c8637fe0",
+      "product": "609031b0243af806c8637fde",
+      "user_story_status": "605ef6fed9e8ff3f5c2ee489",
+      "user_story_comments": [],
+      "id": "60903337243af806c8637fe3"
+    },
+    {
+      "Category": "User_Interface",
+      "Priority": "Moderate",
+      "Attachment": [],
+      "followers": ["60903131243af806c8637fdd", "6090327b243af806c8637fe0"],
+      "Description": "<p>It&nbsp;would&nbsp;be&nbsp;great&nbsp;if&nbsp;users&nbsp;can&nbsp;update&nbsp;their&nbsp;profile&nbsp;pictures.</p>",
+      "Title": "Add profile image update feature",
+      "author": "6090327b243af806c8637fe0",
+      "product": "609032d4243af806c8637fe1",
+      "user_story_status": "605ef6fed9e8ff3f5c2ee489",
+      "user_story_comments": ["609038f7243af806c8637fe6"],
+      "id": "6090345b243af806c8637fe4"
+    },
+    {
+      "Category": "Documentation",
+      "Priority": "High",
+      "Attachment": [],
+      "followers": ["60903131243af806c8637fdd", "6090327b243af806c8637fe0", "60c5e1c4411119001341c8b1"],
+      "Description": "<p>Improve the documentation</p>",
+      "Title": "Improve documentation",
+      "author": "60c5e1c4411119001341c8b1",
+      "product": "609032d4243af806c8637fe1",
+      "user_story_status": "605ef6fed9e8ff3f5c2ee489",
+      "user_story_comments": [],
+      "id": "60c5e230411119001341c8b2"
+    },
+    {
+      "Category": "User_experience",
+      "Priority": "Moderate",
+      "Attachment": [],
+      "followers": ["6090327b243af806c8637fe0", "60903131243af806c8637fdd", "60c5e108411119001341c8b0"],
+      "Description": "<p>Testing</p>",
+      "Title": "New Story",
+      "author": "60c5e1c4411119001341c8b1",
+      "product": "609031b0243af806c8637fde",
+      "user_story_status": "605ef6fed9e8ff3f5c2ee489",
+      "user_story_comments": [],
+      "id": "60c5e42b411119001341c8b4"
+    },
+    {
+      "Category": "User_experience",
+      "Priority": "Moderate",
+      "Attachment": [],
+      "followers": ["6090327b243af806c8637fe0", "60903131243af806c8637fdd", "60c5e108411119001341c8b0"],
+      "Description": "<p>Testing</p>",
+      "Title": "Testing my story",
+      "author": "6090327b243af806c8637fe0",
+      "product": "609031b0243af806c8637fde",
+      "user_story_status": "605ef6fed9e8ff3f5c2ee489",
+      "user_story_comments": [],
+      "id": "60c5e42b411119001341c8b5"
+    },
+    {
+      "Category": "User_experience",
+      "Priority": "Moderate",
+      "Attachment": [],
+      "followers": ["6090327b243af806c8637fe0", "60903131243af806c8637fdd", "60c5e108411119001341c8b0"],
+      "Description": "<p>Testing 1</p>",
+      "Title": "Testing my story1",
+      "author": "6090327b243af806c8637fe0",
+      "product": "609031b0243af806c8637fde",
+      "user_story_status": "605ef6f7d9e8ff3f5c2ee488",
+      "user_story_comments": [],
+      "id": "60c5e42b411119001341c8b6"
+    },
+    {
+      "Category": "User_experience",
+      "Priority": "Moderate",
+      "Attachment": [],
+      "followers": ["6090327b243af806c8637fe0", "60903131243af806c8637fdd", "60c5e108411119001341c8b0"],
+      "Description": "<p>Testing 2</p>",
+      "Title": "Testing my story2",
+      "author": "60903131243af806c8637fdd",
+      "product": "609031b0243af806c8637fde",
+      "user_story_status": "605ef6f7d9e8ff3f5c2ee488",
+      "user_story_comments": [],
+      "id": "60c5e42b411119001341c8b7"
+    }
+  ],
+  "statuses": [
+    {
+      "Status": "Implementing",
+      "user_stories": [],
+      "id": "605ef6d7d9e8ff3f5c2ee484"
+    },
+    {
+      "Status": "Designing",
+      "user_stories": ["6090330d243af806c8637fe2"],
+      "id": "605ef6e6d9e8ff3f5c2ee486"
+    },
+    {
+      "Status": "Deployed",
+      "user_stories": [],
+      "id": "605ef6f0d9e8ff3f5c2ee487"
+    },
+    {
+      "Status": "Planned",
+      "user_stories": [],
+      "id": "605ef6f7d9e8ff3f5c2ee488"
+    },
+    {
+      "Status": "Under consideration",
+      "user_stories": ["6090320d243af806c8637fdf", "60903337243af806c8637fe3", "6090345b243af806c8637fe4"],
+      "id": "605ef6fed9e8ff3f5c2ee489"
+    },
+    {
+      "Status": "Testing",
+      "user_stories": [],
+      "id": "605ef705d9e8ff3f5c2ee48a"
+    }
+  ],
+  "comments": [
+    {
+      "Comments": "Yeah! This would definitely help us.",
+      "user": "6090327b243af806c8637fe0",
+      "user_story": "6090320d243af806c8637fdf",
+      "user_story_comment_replies": [],
+      "id": "609034f7243af806c8637fe5"
+    },
+    {
+      "Comments": "Yeah I agree",
+      "user": "60903131243af806c8637fdd",
+      "user_story": "6090345b243af806c8637fe4",
+      "user_story_comment_replies": [],
+      "id": "609038f7243af806c8637fe6"
+    }
+  ],
+  "users": [
+    {
+      "confirmed": true,
+      "blocked": false,
+      "username": "user1",
+      "email": "test1@gmail.com",
+      "password": "$2a$10$kWhTQZfM21/2xNSZzpGrkurfOei.RFtXS6fGwMPo8YuSRbxSPgMF6",
+      "provider": "local",
+      "role": "605501b3d159e73fe0f40664",
+      "user_story_comments": ["609038f7243af806c8637fe6"],
+      "user_stories": ["6090320d243af806c8637fdf", "60c5e42b411119001341c8b7"],
+      "user_story_comment_replies": [],
+      "id": "60903131243af806c8637fdd"
+    },
+    {
+      "confirmed": true,
+      "blocked": false,
+      "username": "user2",
+      "email": "test2@gmail.com",
+      "password": "$2a$10$nu9pMg3wzrsZJNaGRhwmH.bTkX/wGkFAEOL00jI73VoC.j62iBGDO",
+      "provider": "local",
+      "role": "605501b3d159e73fe0f40664",
+      "user_story_comments": ["609034f7243af806c8637fe5"],
+      "user_stories": ["6090330d243af806c8637fe2", "60903337243af806c8637fe3","6090345b243af806c8637fe4", "60c5e42b411119001341c8b5", "60c5e42b411119001341c8b6"],
+      "user_story_comment_replies": [],
+      "id": "6090327b243af806c8637fe0"
+    },
+    {
+      "confirmed": true,
+      "blocked": false,
+      "username": "user3",
+      "email": "test3@gmail.com",
+      "password": "$2a$10$nu9pMg3wzrsZJNaGRhwmH.bTkX/wGkFAEOL00jI73VoC.j62iBGDO",
+      "Name": "Jane Doe",
+      "provider": "local",
+      "role": "605501b3d159e73fe0f40664",
+      "user_story_comments": [],
+      "user_stories": [],
+      "user_story_comment_replies": [],
+      "id": "60c5e108411119001341c8b0"
+    },
+    {
+      "confirmed": true,
+      "blocked": false,
+      "username": "user4",
+      "email": "test4@gmail.com",
+      "password": "$2a$10$nu9pMg3wzrsZJNaGRhwmH.bTkX/wGkFAEOL00jI73VoC.j62iBGDO",
+      "Name": "John Doe",
+      "provider": "local",
+      "role": "605501b3d159e73fe0f40664",
+      "user_story_comments": [],
+      "user_stories": ["60c5e230411119001341c8b2", "60c5e42b411119001341c8b4"],
+      "user_story_comment_replies": [],
+      "id": "60c5e1c4411119001341c8b1"
+    }
+  ]
+}
