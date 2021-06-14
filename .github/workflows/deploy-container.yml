@@ -31,7 +31,7 @@ jobs:
       - name: Build and Push the Test Image to GitHub Container Registry
         uses: mr-smithers-excellent/docker-build-push@v5
         with:
-          image: ghcr.io/eos-uiux-solutions/strapi
+          image: ghcr.io/eos-uiux-solutions/strapi-test
           registry: ghcr.io
           dockerfile: Dockerfile.test
           githubOrg: SundeepChand
