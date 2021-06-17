@@ -4,16 +4,16 @@
       "Name": "EOS Icons",
       "Description": "A collection of more than 1000 free icons, all open-source.",
       "websiteUrl": "https://eos-icons.com/",
-      "repoUrl": "https://gitlab.com/SUSE-UIUX/eos-icons-landing",
-      "user_stories": ["6090320d243af806c8637fdf", "60903337243af806c8637fe3"],
+      "repoUrl": "https://github.com/EOS-uiux-Solutions/eos-icons-landing",
+      "user_stories": ["6090320d243af806c8637fdf", "60903337243af806c8637fe3", "60c5e42b411119001341c8b4", "60c5e42b411119001341c8b5", "60c5e42b411119001341c8b6", "60c5e42b411119001341c8b7"],
       "id": "609031b0243af806c8637fde"
     },
     {
       "Name": "EOS User Story",
       "Description": "A platform to discuss new features for your products.",
       "websiteUrl": "https://userstory.eosdesignsystem.com/",
-      "repoUrl": "https://gitlab.com/SUSE-UIUX/eos-user-story",
-      "user_stories": ["6090330d243af806c8637fe2", "6090345b243af806c8637fe4"],
+      "repoUrl": "https://github.com/EOS-uiux-Solutions/user-story",
+      "user_stories": ["6090330d243af806c8637fe2", "6090345b243af806c8637fe4", "60c5e230411119001341c8b2"],
       "id": "609032d4243af806c8637fe1"
     }
   ],
@@ -79,7 +79,7 @@
       "Title": "Improve documentation",
       "author": "60c5e1c4411119001341c8b1",
       "product": "609032d4243af806c8637fe1",
-      "user_story_status": "605ef6fed9e8ff3f5c2ee489",
+      "user_story_status": "605ef6f7d9e8ff3f5c2ee488",
       "user_story_comments": [],
       "id": "60c5e230411119001341c8b2"
     },
@@ -92,7 +92,7 @@
       "Title": "New Story",
       "author": "60c5e1c4411119001341c8b1",
       "product": "609031b0243af806c8637fde",
-      "user_story_status": "605ef6fed9e8ff3f5c2ee489",
+      "user_story_status": "605ef6f7d9e8ff3f5c2ee488",
       "user_story_comments": [],
       "id": "60c5e42b411119001341c8b4"
     },
@@ -154,12 +154,12 @@
     },
     {
       "Status": "Planned",
-      "user_stories": [],
+      "user_stories": ["60c5e42b411119001341c8b6", "60c5e42b411119001341c8b7", "60c5e230411119001341c8b2", "60c5e42b411119001341c8b4"],
       "id": "605ef6f7d9e8ff3f5c2ee488"
     },
     {
       "Status": "Under consideration",
-      "user_stories": ["6090320d243af806c8637fdf", "60903337243af806c8637fe3", "6090345b243af806c8637fe4"],
+      "user_stories": ["6090320d243af806c8637fdf", "60903337243af806c8637fe3", "6090345b243af806c8637fe4", "60c5e42b411119001341c8b5"],
       "id": "605ef6fed9e8ff3f5c2ee489"
     },
     {
