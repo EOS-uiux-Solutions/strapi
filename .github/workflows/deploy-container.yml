@@ -39,5 +39,5 @@ jobs:
 
       - name: Build and Push to GitHub Container Registry
         run: |
-          docker build . --tag ghcr.io/eos-uiux-solutions/strapi-test:latest
+          docker build -f 'Dockerfile.test' . --tag ghcr.io/eos-uiux-solutions/strapi-test:latest
           docker push ghcr.io/eos-uiux-solutions/strapi-test:latest
