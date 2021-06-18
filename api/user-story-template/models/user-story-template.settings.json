@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_story_templates",
+  "info": {
+    "name": "User Story Template"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Template": {
+      "type": "richtext",
+      "required": true
+    },
+    "Name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "products": {
+      "collection": "product",
+      "via": "user_story_template"
+    }
+  }
+}
