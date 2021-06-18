@@ -14,7 +14,10 @@ const { products, userStories, comments, users, statuses } = require('../../data
 const insertStatuses = async () => {
   const lenStatuses = await strapi.query('user-story-status').count({})
   if (lenStatuses <= 0) {
-    await Promise.all(statuses.map(status => strapi.query('user-story-status').create(status)))
+    await Promise.all(statuses.map(status => {
+      status.user_stories = []
+      strapi.query('user-story-status').create(status)
+    }))
     console.log('Inserted statuses')
   } else {
     console.log('Statuses already exist.')
@@ -27,7 +30,8 @@ const insertAllItems = async () => {
   await Promise.all(products.map(product => strapi.query('product').create(product)))
   console.log('Inserted products')
 
-  insertStatuses()
+  await Promise.all(statuses.map(status => strapi.query('user-story-status').create(status)))
+  console.log('Inserted statuses')
 
   await Promise.all(userStories.map(userStory => strapi.query('user-story').create(userStory)))
   console.log('Inserted stories')
