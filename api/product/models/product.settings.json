@@ -26,6 +26,10 @@
     },
     "repoUrl": {
       "type": "string"
+    },
+    "user_story_template": {
+      "via": "products",
+      "model": "user-story-template"
     }
   }
 }

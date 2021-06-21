@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/user-stories": {
+    "/user-story-templates": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -52,7 +52,7 @@
         },
         "summary": "",
         "tags": [
-          "User-story"
+          "User-story-template"
         ],
         "parameters": [
           {
@@ -244,7 +244,7 @@
         },
         "summary": "",
         "tags": [
-          "User-story"
+          "User-story-template"
         ],
         "requestBody": {
           "description": "",
@@ -252,14 +252,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewUser-story"
+                "$ref": "#/components/schemas/NewUser-story-template"
               }
             }
           }
         }
       }
     },
-    "/user-stories/count": {
+    "/user-story-templates/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -311,12 +311,12 @@
         },
         "summary": "",
         "tags": [
-          "User-story"
+          "User-story-template"
         ],
         "parameters": []
       }
     },
-    "/user-stories/{id}": {
+    "/user-story-templates/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -368,7 +368,7 @@
         },
         "summary": "",
         "tags": [
-          "User-story"
+          "User-story-template"
         ],
         "parameters": [
           {
@@ -434,7 +434,7 @@
         },
         "summary": "",
         "tags": [
-          "User-story"
+          "User-story-template"
         ],
         "requestBody": {
           "description": "",
@@ -442,7 +442,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewUser-story"
+                "$ref": "#/components/schemas/NewUser-story-template"
               }
             }
           }
@@ -508,7 +508,7 @@
         },
         "summary": "",
         "tags": [
-          "User-story"
+          "User-story-template"
         ],
         "parameters": [
           {
@@ -527,390 +527,77 @@
   },
   "components": {
     "schemas": {
-      "User-story": {
+      "User-story-template": {
         "required": [
           "id",
-          "Category",
-          "Description",
-          "Priority"
+          "Template",
+          "Name"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "Category": {
-            "type": "string",
-            "enum": [
-              "Accessibility",
-              "Documentation",
-              "Bug",
-              "Performance",
-              "User_experience",
-              "User_Interface"
-            ]
-          },
-          "Description": {
+          "Template": {
             "type": "string"
           },
-          "Title": {
+          "Name": {
             "type": "string"
           },
-          "Attachment": {
+          "products": {
             "type": "array",
             "items": {
               "required": [
                 "id",
-                "name",
-                "hash",
-                "mime",
-                "size",
-                "url",
-                "provider"
+                "Name",
+                "Description"
               ],
               "properties": {
                 "id": {
                   "type": "string"
                 },
-                "name": {
+                "Name": {
                   "type": "string"
                 },
-                "alternativeText": {
-                  "type": "string"
-                },
-                "caption": {
-                  "type": "string"
-                },
-                "width": {
-                  "type": "integer"
-                },
-                "height": {
-                  "type": "integer"
-                },
-                "formats": {
-                  "type": "object"
-                },
-                "hash": {
-                  "type": "string"
-                },
-                "ext": {
-                  "type": "string"
-                },
-                "mime": {
-                  "type": "string"
-                },
-                "size": {
-                  "type": "number"
-                },
-                "url": {
-                  "type": "string"
-                },
-                "previewUrl": {
-                  "type": "string"
-                },
-                "provider": {
-                  "type": "string"
-                },
-                "provider_metadata": {
-                  "type": "object"
-                },
-                "related": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "author": {
-            "required": [
-              "id",
-              "username",
-              "email"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "username": {
-                "type": "string"
-              },
-              "email": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "password": {
-                "type": "string"
-              },
-              "resetPasswordToken": {
-                "type": "string"
-              },
-              "confirmed": {
-                "type": "boolean"
-              },
-              "blocked": {
-                "type": "boolean"
-              },
-              "role": {
-                "type": "string"
-              },
-              "profilePicture": {
-                "type": "string"
-              },
-              "Bio": {
-                "type": "string"
-              },
-              "LinkedIn": {
-                "type": "string"
-              },
-              "Twitter": {
-                "type": "string"
-              },
-              "Name": {
-                "type": "string"
-              },
-              "Profession": {
-                "type": "string"
-              },
-              "Company": {
-                "type": "string"
-              },
-              "user_story_comments": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "user_stories": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "user_story_comment_replies": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "user_story_status": {
-            "required": [
-              "id",
-              "Status"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "Status": {
-                "type": "string"
-              },
-              "user_stories": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "user_story_comments": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "Comments": {
-                  "type": "string"
-                },
-                "user_story": {
-                  "type": "string"
-                },
-                "user": {
-                  "type": "string"
-                },
-                "user_story_comment_replies": {
+                "user_stories": {
                   "type": "array",
                   "items": {
                     "type": "string"
                   }
-                }
-              }
-            }
-          },
-          "product": {
-            "required": [
-              "id",
-              "Name",
-              "Description"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "Name": {
-                "type": "string"
-              },
-              "user_stories": {
-                "type": "array",
-                "items": {
+                },
+                "Description": {
                   "type": "string"
-                }
-              },
-              "Description": {
-                "type": "string"
-              },
-              "websiteUrl": {
-                "type": "string"
-              },
-              "repoUrl": {
-                "type": "string"
-              },
-              "user_story_template": {
-                "type": "string"
-              }
-            }
-          },
-          "followers": {
-            "required": [
-              "id",
-              "username",
-              "email"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "username": {
-                "type": "string"
-              },
-              "email": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "password": {
-                "type": "string"
-              },
-              "resetPasswordToken": {
-                "type": "string"
-              },
-              "confirmed": {
-                "type": "boolean"
-              },
-              "blocked": {
-                "type": "boolean"
-              },
-              "role": {
-                "type": "string"
-              },
-              "profilePicture": {
-                "type": "string"
-              },
-              "Bio": {
-                "type": "string"
-              },
-              "LinkedIn": {
-                "type": "string"
-              },
-              "Twitter": {
-                "type": "string"
-              },
-              "Name": {
-                "type": "string"
-              },
-              "Profession": {
-                "type": "string"
-              },
-              "Company": {
-                "type": "string"
-              },
-              "user_story_comments": {
-                "type": "array",
-                "items": {
+                },
+                "websiteUrl": {
                   "type": "string"
-                }
-              },
-              "user_stories": {
-                "type": "array",
-                "items": {
+                },
+                "repoUrl": {
                   "type": "string"
-                }
-              },
-              "user_story_comment_replies": {
-                "type": "array",
-                "items": {
+                },
+                "user_story_template": {
                   "type": "string"
                 }
               }
             }
-          },
-          "Priority": {
-            "type": "string",
-            "enum": [
-              "Low",
-              "Moderate",
-              "High",
-              "Critical"
-            ]
           }
         }
       },
-      "NewUser-story": {
+      "NewUser-story-template": {
         "required": [
-          "Category",
-          "Description",
-          "Priority"
+          "Template",
+          "Name"
         ],
         "properties": {
-          "Category": {
-            "type": "string",
-            "enum": [
-              "Accessibility",
-              "Documentation",
-              "Bug",
-              "Performance",
-              "User_experience",
-              "User_Interface"
-            ]
-          },
-          "Description": {
+          "Template": {
             "type": "string"
           },
-          "Title": {
+          "Name": {
             "type": "string"
           },
-          "author": {
-            "type": "string"
-          },
-          "user_story_status": {
-            "type": "string"
-          },
-          "user_story_comments": {
+          "products": {
             "type": "array",
             "items": {
               "type": "string"
             }
-          },
-          "product": {
-            "type": "string"
-          },
-          "followers": {
-            "type": "string"
-          },
-          "Priority": {
-            "type": "string",
-            "enum": [
-              "Low",
-              "Moderate",
-              "High",
-              "Critical"
-            ]
           }
         }
       }
