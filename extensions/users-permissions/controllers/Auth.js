@@ -132,13 +132,13 @@ module.exports = {
         const token = strapi.plugins["users-permissions"].services.jwt.issue({
             id: user.id,
           });
-          
+
         ctx.cookies.set("token", token, {
             httpOnly: true,
             secure: process.env.EOS_SAMESITE === 'true' ? true : false,
             sameSite: process.env.EOS_SAMESITE === 'true' ? "none" : false
         });
-          
+
         ctx.send({
             status: 'Authenticated',
             user: sanitizeEntity(user.toJSON ? user.toJSON() : user, {
@@ -175,13 +175,13 @@ module.exports = {
       const token = strapi.plugins["users-permissions"].services.jwt.issue({
         id: user.id,
       });
-      
+
       ctx.cookies.set("token", token, {
         httpOnly: true,
         secure: process.env.EOS_SAMESITE === 'true' ? true : false,
         sameSite: process.env.EOS_SAMESITE === 'true' ? "none" : false
       });
-      
+
       ctx.send({
         status: 'Authenticated',
         user: sanitizeEntity(user.toJSON ? user.toJSON() : user, {
@@ -227,13 +227,13 @@ module.exports = {
       const token = strapi.plugins["users-permissions"].services.jwt.issue({
         id: user.id,
       });
-      
+
       ctx.cookies.set("token", token, {
         httpOnly: true,
         secure: process.env.EOS_SAMESITE === 'true' ? true : false,
         sameSite: process.env.EOS_SAMESITE === 'true' ? "none" : false
       });
-      
+
       ctx.send({
         status: 'Authenticated',
         user: sanitizeEntity(user.toJSON ? user.toJSON() : user, {
@@ -250,6 +250,79 @@ module.exports = {
         formatError({
           id: 'Auth.form.error.password.matching',
           message: 'Passwords do not match.',
+        })
+      );
+    } else {
+      return ctx.badRequest(
+        null,
+        formatError({
+          id: 'Auth.form.error.params.provide',
+          message: 'Incorrect params provided.',
+        })
+      );
+    }
+  },
+
+  async changePassword(ctx) {
+    const params = _.assign({}, ctx.request.body, ctx.params);
+
+    if (
+      params.id &&
+      ctx.state.user._id.toString() === params.id &&
+      params.oldPassword &&
+      params.password &&
+      params.passwordConfirmation &&
+      params.password === params.passwordConfirmation
+    ) {
+      const user = await strapi
+        .query('user', 'users-permissions')
+        .findOne({ id: params.id });
+
+      if (!user) {
+        return ctx.badRequest(
+          null,
+          formatError({
+            id: 'Auth.form.error.code.provide',
+            message: 'Incorrect user id provided.',
+          })
+        );
+      }
+
+      if (
+        !strapi.plugins['users-permissions'].services.user.validatePassword(params.oldPassword, user.password)
+      ) {
+        return ctx.badRequest(
+          null,
+          formatError({
+            id: 'Auth.form.error.oldpassword.matching',
+            message: 'Incorrect old password.',
+          })
+        );
+      }
+
+      user.password = await strapi.plugins['users-permissions'].services.user.hashPassword({
+        password: params.password,
+      });
+
+      // Update the user.
+      await strapi.query('user', 'users-permissions').update({ id: user.id }, user);
+
+      ctx.send({
+        status: 'Password Updated',
+        user: sanitizeEntity(user.toJSON ? user.toJSON() : user, {
+          model: strapi.query('user', 'users-permissions').model,
+        }),
+      });
+    } else if (
+      params.password &&
+      params.passwordConfirmation &&
+      params.password !== params.passwordConfirmation
+    ) {
+      return ctx.badRequest(
+        null,
+        formatError({
+          id: 'Auth.form.error.password.matching',
+          message: 'New Password and Confirm Password do not match.',
         })
       );
     } else {

@@ -1,0 +1,19 @@
+{
+  "routes": [
+    {
+      "method": "POST",
+      "path": "/auth/change-password",
+      "handler": "Auth.changePassword",
+      "config": {
+        "policies": ["plugins::users-permissions.isAuthenticated"],
+        "prefix": "",
+        "description": "Update the user password",
+        "tag": {
+          "plugin": "users-permissions",
+          "name": "User",
+          "actionType": "update"
+        }
+      }
+    }
+  ]
+}
