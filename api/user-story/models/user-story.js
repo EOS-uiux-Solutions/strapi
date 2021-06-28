@@ -24,6 +24,14 @@ module.exports = {
                 }
             }
             catch(e) {}
+        },
+        async beforeCreate(data) {
+          try {
+            const status = await strapi.query('user-story-status').findOne({ Status: 'Under consideration' })
+            data.user_story_status = status.id
+          } catch (e) {
+            console.log('Unable to fetch "Under consideration" status')
+          }
         }
     }
 };
