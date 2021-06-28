@@ -587,6 +587,9 @@
           },
           "repoUrl": {
             "type": "string"
+          },
+          "user_story_template": {
+            "type": "string"
           }
         }
       },
@@ -612,6 +615,9 @@
             "type": "string"
           },
           "repoUrl": {
+            "type": "string"
+          },
+          "user_story_template": {
             "type": "string"
           }
         }

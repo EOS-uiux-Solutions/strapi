@@ -26,6 +26,9 @@
     },
     "repoUrl": {
       "type": "string"
+    },
+    "user_story_template": {
+      "type": "richtext"
     }
   }
 }
