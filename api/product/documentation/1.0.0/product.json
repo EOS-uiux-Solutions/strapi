@@ -589,28 +589,7 @@
             "type": "string"
           },
           "user_story_template": {
-            "required": [
-              "id",
-              "Template",
-              "Name"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "Template": {
-                "type": "string"
-              },
-              "Name": {
-                "type": "string"
-              },
-              "products": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
+            "type": "string"
           }
         }
       },

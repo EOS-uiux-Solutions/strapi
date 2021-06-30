@@ -14,8 +14,8 @@
       "required": true
     },
     "user_stories": {
-      "via": "product",
-      "collection": "user-story"
+      "collection": "user-story",
+      "via": "product"
     },
     "Description": {
       "type": "richtext",
@@ -28,8 +28,7 @@
       "type": "string"
     },
     "user_story_template": {
-      "via": "products",
-      "model": "user-story-template"
+      "type": "richtext"
     }
   }
 }
