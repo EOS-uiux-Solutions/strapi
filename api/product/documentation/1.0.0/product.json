@@ -588,7 +588,7 @@
           "repoUrl": {
             "type": "string"
           },
-          "user_story_template": {
+          "product_template": {
             "type": "string"
           }
         }
@@ -617,7 +617,7 @@
           "repoUrl": {
             "type": "string"
           },
-          "user_story_template": {
+          "product_template": {
             "type": "string"
           }
         }
