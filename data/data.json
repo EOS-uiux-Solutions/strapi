@@ -7,7 +7,7 @@
       "repoUrl": "https://github.com/EOS-uiux-Solutions/eos-icons-landing",
       "user_stories": ["6090320d243af806c8637fdf", "60903337243af806c8637fe3", "60c5e42b411119001341c8b4", "60c5e42b411119001341c8b5", "60c5e42b411119001341c8b6", "60c5e42b411119001341c8b7"],
       "id": "609031b0243af806c8637fde",
-      "user_story_template": "# What is the issue?\n<!--Write a brief summary of your issue.-->\n\n<!--If reporting a bug, then describe the exact steps to reproduce it as well as the browser version you are using-->\n\n<!--If requesting a new icon, then add some reference images to describe it better-->"
+      "product_template": "# What is the issue?\n<!--Write a brief summary of your issue.-->\n\n<!--If reporting a bug, then describe the exact steps to reproduce it as well as the browser version you are using-->\n\n<!--If requesting a new icon, then add some reference images to describe it better-->"
     },
     {
       "Name": "EOS User Story",
