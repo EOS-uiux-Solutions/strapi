@@ -133,9 +133,12 @@ module.exports = {
             id: user.id,
           });
 
+          console.log('EOS_SECURE: ', process.env.EOS_SECURE);
+          console.log('EOS_SAMESITE: ', process.env.EOS_SAMESITE);
+
         ctx.cookies.set("token", token, {
             httpOnly: true,
-            secure: process.env.EOS_SAMESITE === 'true' ? true : false,
+            secure: process.env.EOS_SECURE === 'true' ? true : false,
             sameSite: process.env.EOS_SAMESITE === 'true' ? "none" : false
         });
 
@@ -178,7 +181,7 @@ module.exports = {
 
       ctx.cookies.set("token", token, {
         httpOnly: true,
-        secure: process.env.EOS_SAMESITE === 'true' ? true : false,
+        secure: process.env.EOS_SECURE === 'true' ? true : false,
         sameSite: process.env.EOS_SAMESITE === 'true' ? "none" : false
       });
 
@@ -230,7 +233,7 @@ module.exports = {
 
       ctx.cookies.set("token", token, {
         httpOnly: true,
-        secure: process.env.EOS_SAMESITE === 'true' ? true : false,
+        secure: process.env.EOS_SECURE === 'true' ? true : false,
         sameSite: process.env.EOS_SAMESITE === 'true' ? "none" : false
       });
 
@@ -596,7 +599,7 @@ module.exports = {
 
       ctx.cookies.set("token", token, {
         httpOnly: true,
-        secure: process.env.EOS_SAMESITE === 'true' ? true : false,
+        secure: process.env.EOS_SECURE === 'true' ? true : false,
         sameSite: process.env.EOS_SAMESITE === 'true' ? "none" : false
       });
 
