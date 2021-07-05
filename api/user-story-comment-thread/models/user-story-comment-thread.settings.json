@@ -20,6 +20,17 @@
       "plugin": "users-permissions",
       "model": "user",
       "via": "user_story_comment_replies"
+    },
+    "attachment": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
     }
   }
 }

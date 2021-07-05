@@ -738,6 +738,12 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "attachment": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 }
               }
             }

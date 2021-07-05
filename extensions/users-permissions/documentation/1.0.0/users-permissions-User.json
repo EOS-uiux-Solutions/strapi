@@ -1411,6 +1411,12 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "attachment": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 }
               }
             }
@@ -1485,6 +1491,12 @@
                 },
                 "user": {
                   "type": "string"
+                },
+                "attachment": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 }
               }
             }
