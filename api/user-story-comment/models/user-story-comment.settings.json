@@ -13,8 +13,8 @@
       "type": "richtext"
     },
     "user_story": {
-      "via": "user_story_comments",
-      "model": "user-story"
+      "model": "user-story",
+      "via": "user_story_comments"
     },
     "user": {
       "plugin": "users-permissions",
@@ -24,6 +24,17 @@
     "user_story_comment_replies": {
       "via": "user_story_comment",
       "collection": "user-story-comment-thread"
+    },
+    "attachment": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
     }
   }
 }
