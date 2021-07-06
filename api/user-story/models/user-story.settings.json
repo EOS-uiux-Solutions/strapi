@@ -27,7 +27,8 @@
     },
     "Title": {
       "type": "string",
-      "unique": true
+      "unique": false,
+      "required": true
     },
     "Attachment": {
       "collection": "file",
@@ -54,8 +55,8 @@
       "collection": "user-story-comment"
     },
     "product": {
-      "via": "user_stories",
-      "model": "product"
+      "model": "product",
+      "via": "user_stories"
     },
     "followers": {
       "unique": true,

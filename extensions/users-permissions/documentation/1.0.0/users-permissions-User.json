@@ -1428,6 +1428,7 @@
                 "id",
                 "Category",
                 "Description",
+                "Title",
                 "Priority"
               ],
               "properties": {
