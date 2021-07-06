@@ -532,6 +532,7 @@
           "id",
           "Category",
           "Description",
+          "Title",
           "Priority"
         ],
         "properties": {
@@ -865,6 +866,7 @@
         "required": [
           "Category",
           "Description",
+          "Title",
           "Priority"
         ],
         "properties": {
