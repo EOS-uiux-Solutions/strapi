@@ -9,7 +9,7 @@
  *
  * See more details here: https://strapi.io/documentation/v3.x/concepts/configurations.html#bootstrap
  */
-const { products, userStories, comments, users, statuses } = require('../../data/data.json')
+const { products, statuses } = require('../../data/data.json')
 
 const insertStatuses = async () => {
   const lenStatuses = await strapi.query('user-story-status').count({})
@@ -32,21 +32,6 @@ const insertAllItems = async () => {
 
   await Promise.all(statuses.map(status => strapi.query('user-story-status').create(status)))
   console.log('Inserted statuses')
-
-  await Promise.all(userStories.map(userStory => strapi.query('user-story').create(userStory)))
-  console.log('Inserted stories')
-
-  await Promise.all(comments.map(comment => strapi.query('user-story-comment').create(comment)))
-  console.log('Inserted comments')
-
-  let id = await strapi.plugins['users-permissions'].services.userspermissions.getRoles()
-  id = id.filter(i => i.type === 'authenticated').map(i => i.id)[0]
-  await Promise.all(users.map(user => {
-    // Find the id of the authenticated role and update the user's role
-    user.role = id
-    strapi.plugins['users-permissions'].services.user.add(user)
-  }))
-  console.log('Inserted users')
 }
 
 const setUsersPermissions = async () => {
