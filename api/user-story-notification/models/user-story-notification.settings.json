@@ -11,7 +11,7 @@
   "attributes": {
     "message": {
       "type": "string",
-      "unique": true
+      "unique": false
     },
     "date": {
       "type": "datetime"
