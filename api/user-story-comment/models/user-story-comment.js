@@ -12,7 +12,7 @@ module.exports = {
                 if(result.user.id != result.user_story.author) {
                     let user = result.user_story.author
                     await strapi.services['user-story-notification'].create({
-                        message: `${result.user.username} commented on your ${result.user_story.Title} story`,
+                        message: `${result.user.username} commented on your story`,
                         users: [user],
                         date: new Date(),
                         link: `story/${result.user_story.id}`
