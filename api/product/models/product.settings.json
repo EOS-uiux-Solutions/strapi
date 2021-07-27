@@ -14,8 +14,8 @@
       "required": true
     },
     "user_stories": {
-      "via": "product",
-      "collection": "user-story"
+      "collection": "user-story",
+      "via": "product"
     },
     "Description": {
       "type": "richtext",
@@ -29,6 +29,15 @@
     },
     "product_template": {
       "type": "richtext"
+    },
+    "product_logo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
     }
   }
 }

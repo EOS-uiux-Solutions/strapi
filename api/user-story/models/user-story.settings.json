@@ -55,8 +55,8 @@
       "collection": "user-story-comment"
     },
     "product": {
-      "model": "product",
-      "via": "user_stories"
+      "via": "user_stories",
+      "model": "product"
     },
     "followers": {
       "unique": true,
