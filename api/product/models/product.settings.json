@@ -30,7 +30,7 @@
     "product_template": {
       "type": "richtext"
     },
-    "product_logo": {
+    "logo": {
       "model": "file",
       "via": "related",
       "allowedTypes": [

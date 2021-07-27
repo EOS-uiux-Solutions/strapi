@@ -519,7 +519,7 @@
           "id",
           "Name",
           "Description",
-          "product_logo"
+          "logo"
         ],
         "properties": {
           "id": {
@@ -593,7 +593,7 @@
           "product_template": {
             "type": "string"
           },
-          "product_logo": {
+          "logo": {
             "required": [
               "id",
               "name",
