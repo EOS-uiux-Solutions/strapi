@@ -753,7 +753,8 @@
             "required": [
               "id",
               "Name",
-              "Description"
+              "Description",
+              "logo"
             ],
             "properties": {
               "id": {
@@ -778,6 +779,9 @@
                 "type": "string"
               },
               "product_template": {
+                "type": "string"
+              },
+              "logo": {
                 "type": "string"
               }
             }
