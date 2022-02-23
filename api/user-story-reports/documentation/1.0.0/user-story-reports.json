@@ -1,12 +1,12 @@
 {
   "paths": {
-    "/user-stories": {
+    "/user-story-reports": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find all the user-story-reports's records",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve user-story-reports document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -52,7 +52,7 @@
         },
         "summary": "",
         "tags": [
-          "User-story"
+          "User-story-reports"
         ],
         "parameters": [
           {
@@ -195,10 +195,10 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new record",
+        "description": "Create a new user-story-reports record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve user-story-reports document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -244,7 +244,7 @@
         },
         "summary": "",
         "tags": [
-          "User-story"
+          "User-story-reports"
         ],
         "requestBody": {
           "description": "",
@@ -252,20 +252,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewUser-story"
+                "$ref": "#/components/schemas/NewUser-story-reports"
               }
             }
           }
         }
       }
     },
-    "/user-stories/count": {
+    "/user-story-reports/count": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Retrieve the numver of user-story-reports documents",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve user-story-reports document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -311,18 +311,18 @@
         },
         "summary": "",
         "tags": [
-          "User-story"
+          "User-story-reports"
         ],
         "parameters": []
       }
     },
-    "/user-stories/{id}": {
+    "/user-story-reports/{id}": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find one user-story-reports record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve user-story-reports document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -368,7 +368,7 @@
         },
         "summary": "",
         "tags": [
-          "User-story"
+          "User-story-reports"
         ],
         "parameters": [
           {
@@ -385,10 +385,10 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a record",
+        "description": "Update a single user-story-reports record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve user-story-reports document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -434,7 +434,7 @@
         },
         "summary": "",
         "tags": [
-          "User-story"
+          "User-story-reports"
         ],
         "requestBody": {
           "description": "",
@@ -442,7 +442,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewUser-story"
+                "$ref": "#/components/schemas/NewUser-story-reports"
               }
             }
           }
@@ -462,10 +462,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a record",
+        "description": "Delete a single user-story-reports record",
         "responses": {
           "200": {
-            "description": "deletes a single record based on the ID supplied",
+            "description": "deletes a single user-story-reports based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -508,7 +508,7 @@
         },
         "summary": "",
         "tags": [
-          "User-story"
+          "User-story-reports"
         ],
         "parameters": [
           {
@@ -527,318 +527,51 @@
   },
   "components": {
     "schemas": {
-      "User-story": {
+      "User-story-reports": {
         "required": [
-          "id",
-          "Category",
-          "Description",
-          "Title",
-          "Priority"
+          "id"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "Category": {
-            "type": "string",
-            "enum": [
-              "Accessibility",
-              "Documentation",
-              "Bug",
-              "Performance",
-              "User_experience",
-              "User_Interface"
-            ]
-          },
-          "Description": {
+          "Username": {
             "type": "string"
           },
-          "Title": {
+          "Reason": {
             "type": "string"
           },
-          "Attachment": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "name",
-                "hash",
-                "mime",
-                "size",
-                "url",
-                "provider"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "alternativeText": {
-                  "type": "string"
-                },
-                "caption": {
-                  "type": "string"
-                },
-                "width": {
-                  "type": "integer"
-                },
-                "height": {
-                  "type": "integer"
-                },
-                "formats": {
-                  "type": "object"
-                },
-                "hash": {
-                  "type": "string"
-                },
-                "ext": {
-                  "type": "string"
-                },
-                "mime": {
-                  "type": "string"
-                },
-                "size": {
-                  "type": "number"
-                },
-                "url": {
-                  "type": "string"
-                },
-                "previewUrl": {
-                  "type": "string"
-                },
-                "provider": {
-                  "type": "string"
-                },
-                "provider_metadata": {
-                  "type": "object"
-                },
-                "related": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "author": {
+          "user_story": {
             "required": [
               "id",
-              "username",
-              "email"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "username": {
-                "type": "string"
-              },
-              "email": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "password": {
-                "type": "string"
-              },
-              "resetPasswordToken": {
-                "type": "string"
-              },
-              "confirmed": {
-                "type": "boolean"
-              },
-              "blocked": {
-                "type": "boolean"
-              },
-              "role": {
-                "type": "string"
-              },
-              "profilePicture": {
-                "type": "string"
-              },
-              "Bio": {
-                "type": "string"
-              },
-              "LinkedIn": {
-                "type": "string"
-              },
-              "Twitter": {
-                "type": "string"
-              },
-              "Name": {
-                "type": "string"
-              },
-              "Profession": {
-                "type": "string"
-              },
-              "Company": {
-                "type": "string"
-              },
-              "user_story_comments": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "user_stories": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "user_story_comment_replies": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "user_story_status": {
-            "required": [
-              "id",
-              "Status"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "Status": {
-                "type": "string"
-              },
-              "user_stories": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "user_story_comments": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "Comments": {
-                  "type": "string"
-                },
-                "user_story": {
-                  "type": "string"
-                },
-                "user": {
-                  "type": "string"
-                },
-                "user_story_comment_replies": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "attachment": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                }
-              }
-            }
-          },
-          "product": {
-            "required": [
-              "id",
-              "Name",
+              "Category",
               "Description",
-              "logo"
+              "Title",
+              "Priority"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "Name": {
+              "Category": {
                 "type": "string"
-              },
-              "user_stories": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
               },
               "Description": {
                 "type": "string"
               },
-              "websiteUrl": {
+              "Title": {
                 "type": "string"
               },
-              "repoUrl": {
+              "Attachment": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "author": {
                 "type": "string"
               },
-              "product_template": {
-                "type": "string"
-              },
-              "logo": {
-                "type": "string"
-              }
-            }
-          },
-          "followers": {
-            "required": [
-              "id",
-              "username",
-              "email"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "username": {
-                "type": "string"
-              },
-              "email": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "password": {
-                "type": "string"
-              },
-              "resetPasswordToken": {
-                "type": "string"
-              },
-              "confirmed": {
-                "type": "boolean"
-              },
-              "blocked": {
-                "type": "boolean"
-              },
-              "role": {
-                "type": "string"
-              },
-              "profilePicture": {
-                "type": "string"
-              },
-              "Bio": {
-                "type": "string"
-              },
-              "LinkedIn": {
-                "type": "string"
-              },
-              "Twitter": {
-                "type": "string"
-              },
-              "Name": {
-                "type": "string"
-              },
-              "Profession": {
-                "type": "string"
-              },
-              "Company": {
+              "user_story_status": {
                 "type": "string"
               },
               "user_story_comments": {
@@ -847,46 +580,18 @@
                   "type": "string"
                 }
               },
-              "user_stories": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
+              "product": {
+                "type": "string"
               },
-              "user_story_comment_replies": {
+              "followers": {
+                "type": "string"
+              },
+              "Priority": {
+                "type": "string"
+              },
+              "user_story_reports": {
                 "type": "array",
                 "items": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "Priority": {
-            "type": "string",
-            "enum": [
-              "Low",
-              "Moderate",
-              "High",
-              "Critical"
-            ]
-          },
-          "user_story_reports": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "Username": {
-                  "type": "string"
-                },
-                "Reason": {
-                  "type": "string"
-                },
-                "user_story": {
                   "type": "string"
                 }
               }
@@ -894,63 +599,16 @@
           }
         }
       },
-      "NewUser-story": {
-        "required": [
-          "Category",
-          "Description",
-          "Title",
-          "Priority"
-        ],
+      "NewUser-story-reports": {
         "properties": {
-          "Category": {
-            "type": "string",
-            "enum": [
-              "Accessibility",
-              "Documentation",
-              "Bug",
-              "Performance",
-              "User_experience",
-              "User_Interface"
-            ]
-          },
-          "Description": {
+          "Username": {
             "type": "string"
           },
-          "Title": {
+          "Reason": {
             "type": "string"
           },
-          "author": {
+          "user_story": {
             "type": "string"
-          },
-          "user_story_status": {
-            "type": "string"
-          },
-          "user_story_comments": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "product": {
-            "type": "string"
-          },
-          "followers": {
-            "type": "string"
-          },
-          "Priority": {
-            "type": "string",
-            "enum": [
-              "Low",
-              "Moderate",
-              "High",
-              "Critical"
-            ]
-          },
-          "user_story_reports": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
           }
         }
       }

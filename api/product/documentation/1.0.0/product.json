@@ -577,6 +577,12 @@
                 },
                 "Priority": {
                   "type": "string"
+                },
+                "user_story_reports": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 }
               }
             }

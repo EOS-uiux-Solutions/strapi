@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_story_reports",
+  "info": {
+    "name": "User Story Reports"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Username": {
+      "type": "string"
+    },
+    "Reason": {
+      "type": "richtext"
+    },
+    "user_story": {
+      "model": "user-story",
+      "via": "user_story_reports"
+    }
+  }
+}

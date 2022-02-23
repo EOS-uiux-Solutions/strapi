@@ -72,6 +72,10 @@
         "Critical"
       ],
       "required": true
+    },
+    "user_story_reports": {
+      "via": "user_story",
+      "collection": "user-story-reports"
     }
   }
 }
