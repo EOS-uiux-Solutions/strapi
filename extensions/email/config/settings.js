@@ -1,7 +1,7 @@
 module.exports = {
     provider: 'sendgrid',
     providerOptions: {
-        apiKey: 'SG.uq6gkZHsSw2v4l4eYrYuPw.phJiQqg_qQKzXj2UggSfJQZ6pBM8LTaI2TYOURPzZ_Q'
+        apiKey: process.env.SENDGRID_API_KEY
     },
     settings: {
       defaultFrom: 'no-reply@eosdesignsystem.com',
