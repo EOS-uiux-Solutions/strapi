@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "02/23/2022 11:49:22 AM"
+    "x-generation-date": "03/06/2022 1:39:45 AM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -6898,6 +6898,12 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "reports": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               }
             }
           },
@@ -7119,6 +7125,12 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "reports": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               }
             }
           },
@@ -7321,6 +7333,12 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "reports": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               }
             }
           },
@@ -7396,6 +7414,12 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "reports": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               }
             }
           },
@@ -7449,9 +7473,6 @@
         ],
         "properties": {
           "id": {
-            "type": "string"
-          },
-          "Username": {
             "type": "string"
           },
           "Reason": {
@@ -7512,18 +7533,99 @@
                 }
               }
             }
+          },
+          "username": {
+            "required": [
+              "id",
+              "username",
+              "email"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "username": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "password": {
+                "type": "string"
+              },
+              "resetPasswordToken": {
+                "type": "string"
+              },
+              "confirmed": {
+                "type": "boolean"
+              },
+              "blocked": {
+                "type": "boolean"
+              },
+              "role": {
+                "type": "string"
+              },
+              "profilePicture": {
+                "type": "string"
+              },
+              "Bio": {
+                "type": "string"
+              },
+              "LinkedIn": {
+                "type": "string"
+              },
+              "Twitter": {
+                "type": "string"
+              },
+              "Name": {
+                "type": "string"
+              },
+              "Profession": {
+                "type": "string"
+              },
+              "Company": {
+                "type": "string"
+              },
+              "user_story_comments": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "user_stories": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "user_story_comment_replies": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "reports": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
           }
         }
       },
       "NewUser-story-reports": {
         "properties": {
-          "Username": {
-            "type": "string"
-          },
           "Reason": {
             "type": "string"
           },
           "user_story": {
+            "type": "string"
+          },
+          "username": {
             "type": "string"
           }
         }
@@ -7782,6 +7884,12 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "reports": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               }
             }
           },
@@ -7948,6 +8056,12 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "reports": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               }
             }
           },
@@ -7970,13 +8084,13 @@
                 "id": {
                   "type": "string"
                 },
-                "Username": {
-                  "type": "string"
-                },
                 "Reason": {
                   "type": "string"
                 },
                 "user_story": {
+                  "type": "string"
+                },
+                "username": {
                   "type": "string"
                 }
               }
@@ -8168,6 +8282,12 @@
                   }
                 },
                 "user_story_comment_replies": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "reports": {
                   "type": "array",
                   "items": {
                     "type": "string"
@@ -8467,6 +8587,28 @@
                 }
               }
             }
+          },
+          "reports": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "Reason": {
+                  "type": "string"
+                },
+                "user_story": {
+                  "type": "string"
+                },
+                "username": {
+                  "type": "string"
+                }
+              }
+            }
           }
         }
       },
@@ -8536,6 +8678,12 @@
             }
           },
           "user_story_comment_replies": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "reports": {
             "type": "array",
             "items": {
               "type": "string"

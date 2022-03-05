@@ -9,15 +9,17 @@
     "timestamps": true
   },
   "attributes": {
-    "Username": {
-      "type": "string"
-    },
     "Reason": {
       "type": "richtext"
     },
     "user_story": {
       "model": "user-story",
       "via": "user_story_reports"
+    },
+    "username": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "reports"
     }
   }
 }

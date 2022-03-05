@@ -535,9 +535,6 @@
           "id": {
             "type": "string"
           },
-          "Username": {
-            "type": "string"
-          },
           "Reason": {
             "type": "string"
           },
@@ -596,18 +593,99 @@
                 }
               }
             }
+          },
+          "username": {
+            "required": [
+              "id",
+              "username",
+              "email"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "username": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "password": {
+                "type": "string"
+              },
+              "resetPasswordToken": {
+                "type": "string"
+              },
+              "confirmed": {
+                "type": "boolean"
+              },
+              "blocked": {
+                "type": "boolean"
+              },
+              "role": {
+                "type": "string"
+              },
+              "profilePicture": {
+                "type": "string"
+              },
+              "Bio": {
+                "type": "string"
+              },
+              "LinkedIn": {
+                "type": "string"
+              },
+              "Twitter": {
+                "type": "string"
+              },
+              "Name": {
+                "type": "string"
+              },
+              "Profession": {
+                "type": "string"
+              },
+              "Company": {
+                "type": "string"
+              },
+              "user_story_comments": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "user_stories": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "user_story_comment_replies": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "reports": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
           }
         }
       },
       "NewUser-story-reports": {
         "properties": {
-          "Username": {
-            "type": "string"
-          },
           "Reason": {
             "type": "string"
           },
           "user_story": {
+            "type": "string"
+          },
+          "username": {
             "type": "string"
           }
         }

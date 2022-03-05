@@ -692,6 +692,12 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "reports": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               }
             }
           },
@@ -858,6 +864,12 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "reports": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               }
             }
           },
@@ -880,13 +892,13 @@
                 "id": {
                   "type": "string"
                 },
-                "Username": {
-                  "type": "string"
-                },
                 "Reason": {
                   "type": "string"
                 },
                 "user_story": {
+                  "type": "string"
+                },
+                "username": {
                   "type": "string"
                 }
               }

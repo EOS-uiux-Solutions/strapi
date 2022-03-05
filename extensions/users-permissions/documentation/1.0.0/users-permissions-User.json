@@ -1507,6 +1507,28 @@
                 }
               }
             }
+          },
+          "reports": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "Reason": {
+                  "type": "string"
+                },
+                "user_story": {
+                  "type": "string"
+                },
+                "username": {
+                  "type": "string"
+                }
+              }
+            }
           }
         }
       },
@@ -1576,6 +1598,12 @@
             }
           },
           "user_story_comment_replies": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "reports": {
             "type": "array",
             "items": {
               "type": "string"
