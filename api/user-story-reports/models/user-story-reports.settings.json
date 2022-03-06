@@ -16,7 +16,7 @@
       "model": "user-story",
       "via": "user_story_reports"
     },
-    "username": {
+    "user": {
       "plugin": "users-permissions",
       "model": "user",
       "via": "reports"

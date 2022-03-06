@@ -594,7 +594,7 @@
               }
             }
           },
-          "username": {
+          "user": {
             "required": [
               "id",
               "username",
@@ -685,7 +685,7 @@
           "user_story": {
             "type": "string"
           },
-          "username": {
+          "user": {
             "type": "string"
           }
         }

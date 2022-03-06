@@ -94,7 +94,7 @@
       "collection": "user-story-comment-thread"
     },
     "reports": {
-      "via": "username",
+      "via": "user",
       "collection": "user-story-reports"
     }
   }
