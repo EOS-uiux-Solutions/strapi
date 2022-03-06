@@ -692,6 +692,12 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "reports": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               }
             }
           },
@@ -858,6 +864,12 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "reports": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               }
             }
           },
@@ -869,6 +881,28 @@
               "High",
               "Critical"
             ]
+          },
+          "user_story_reports": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "Reason": {
+                  "type": "string"
+                },
+                "user_story": {
+                  "type": "string"
+                },
+                "user": {
+                  "type": "string"
+                }
+              }
+            }
           }
         }
       },
@@ -923,6 +957,12 @@
               "High",
               "Critical"
             ]
+          },
+          "user_story_reports": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           }
         }
       }

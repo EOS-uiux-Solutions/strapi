@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/user-story-reports",
+      "handler": "user-story-reports.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/user-story-reports/count",
+      "handler": "user-story-reports.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/user-story-reports/:id",
+      "handler": "user-story-reports.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/user-story-reports",
+      "handler": "user-story-reports.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/user-story-reports/:id",
+      "handler": "user-story-reports.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/user-story-reports/:id",
+      "handler": "user-story-reports.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

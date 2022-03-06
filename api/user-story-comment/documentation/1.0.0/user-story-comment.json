@@ -585,6 +585,12 @@
               },
               "Priority": {
                 "type": "string"
+              },
+              "user_story_reports": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               }
             }
           },
@@ -656,6 +662,12 @@
                 }
               },
               "user_story_comment_replies": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "reports": {
                 "type": "array",
                 "items": {
                   "type": "string"

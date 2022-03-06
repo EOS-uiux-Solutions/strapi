@@ -92,6 +92,10 @@
     "user_story_comment_replies": {
       "via": "user",
       "collection": "user-story-comment-thread"
+    },
+    "reports": {
+      "via": "user",
+      "collection": "user-story-reports"
     }
   }
 }

@@ -1,12 +1,12 @@
 {
   "paths": {
-    "/user-story-notifications": {
+    "/user-story-reports": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find all the user-story-reports's records",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve user-story-reports document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -52,7 +52,7 @@
         },
         "summary": "",
         "tags": [
-          "User-story-notification"
+          "User-story-reports"
         ],
         "parameters": [
           {
@@ -195,10 +195,10 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new record",
+        "description": "Create a new user-story-reports record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve user-story-reports document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -244,7 +244,7 @@
         },
         "summary": "",
         "tags": [
-          "User-story-notification"
+          "User-story-reports"
         ],
         "requestBody": {
           "description": "",
@@ -252,20 +252,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewUser-story-notification"
+                "$ref": "#/components/schemas/NewUser-story-reports"
               }
             }
           }
         }
       }
     },
-    "/user-story-notifications/count": {
+    "/user-story-reports/count": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Retrieve the numver of user-story-reports documents",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve user-story-reports document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -311,18 +311,18 @@
         },
         "summary": "",
         "tags": [
-          "User-story-notification"
+          "User-story-reports"
         ],
         "parameters": []
       }
     },
-    "/user-story-notifications/{id}": {
+    "/user-story-reports/{id}": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find one user-story-reports record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve user-story-reports document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -368,7 +368,7 @@
         },
         "summary": "",
         "tags": [
-          "User-story-notification"
+          "User-story-reports"
         ],
         "parameters": [
           {
@@ -385,10 +385,10 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a record",
+        "description": "Update a single user-story-reports record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve user-story-reports document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -434,7 +434,7 @@
         },
         "summary": "",
         "tags": [
-          "User-story-notification"
+          "User-story-reports"
         ],
         "requestBody": {
           "description": "",
@@ -442,7 +442,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewUser-story-notification"
+                "$ref": "#/components/schemas/NewUser-story-reports"
               }
             }
           }
@@ -462,10 +462,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a record",
+        "description": "Delete a single user-story-reports record",
         "responses": {
           "200": {
-            "description": "deletes a single record based on the ID supplied",
+            "description": "deletes a single user-story-reports based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -508,7 +508,7 @@
         },
         "summary": "",
         "tags": [
-          "User-story-notification"
+          "User-story-reports"
         ],
         "parameters": [
           {
@@ -527,7 +527,7 @@
   },
   "components": {
     "schemas": {
-      "User-story-notification": {
+      "User-story-reports": {
         "required": [
           "id"
         ],
@@ -535,13 +535,66 @@
           "id": {
             "type": "string"
           },
-          "message": {
+          "Reason": {
             "type": "string"
           },
-          "date": {
-            "type": "datetime"
+          "user_story": {
+            "required": [
+              "id",
+              "Category",
+              "Description",
+              "Title",
+              "Priority"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "Category": {
+                "type": "string"
+              },
+              "Description": {
+                "type": "string"
+              },
+              "Title": {
+                "type": "string"
+              },
+              "Attachment": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "author": {
+                "type": "string"
+              },
+              "user_story_status": {
+                "type": "string"
+              },
+              "user_story_comments": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "product": {
+                "type": "string"
+              },
+              "followers": {
+                "type": "string"
+              },
+              "Priority": {
+                "type": "string"
+              },
+              "user_story_reports": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
           },
-          "users": {
+          "user": {
             "required": [
               "id",
               "username",
@@ -621,108 +674,18 @@
                 }
               }
             }
-          },
-          "seenBy": {
-            "required": [
-              "id",
-              "username",
-              "email"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "username": {
-                "type": "string"
-              },
-              "email": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "password": {
-                "type": "string"
-              },
-              "resetPasswordToken": {
-                "type": "string"
-              },
-              "confirmed": {
-                "type": "boolean"
-              },
-              "blocked": {
-                "type": "boolean"
-              },
-              "role": {
-                "type": "string"
-              },
-              "profilePicture": {
-                "type": "string"
-              },
-              "Bio": {
-                "type": "string"
-              },
-              "LinkedIn": {
-                "type": "string"
-              },
-              "Twitter": {
-                "type": "string"
-              },
-              "Name": {
-                "type": "string"
-              },
-              "Profession": {
-                "type": "string"
-              },
-              "Company": {
-                "type": "string"
-              },
-              "user_story_comments": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "user_stories": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "user_story_comment_replies": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "reports": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "link": {
-            "type": "string"
           }
         }
       },
-      "NewUser-story-notification": {
+      "NewUser-story-reports": {
         "properties": {
-          "message": {
+          "Reason": {
             "type": "string"
           },
-          "date": {
-            "type": "datetime"
-          },
-          "users": {
+          "user_story": {
             "type": "string"
           },
-          "seenBy": {
-            "type": "string"
-          },
-          "link": {
+          "user": {
             "type": "string"
           }
         }

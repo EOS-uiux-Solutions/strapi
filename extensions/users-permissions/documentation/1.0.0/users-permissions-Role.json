@@ -647,6 +647,12 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "reports": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 }
               }
             }
