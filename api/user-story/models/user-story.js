@@ -7,9 +7,9 @@
 
 module.exports = {
   lifecycles: {
-    async afterUpdate(result) {
-      try {
-        if(result.user_story_status.Status === 'Deployed') {
+    async afterUpdate(result){
+      try{
+          if(result.user_story_status.Status === 'Deployed') {
           let users = result.followers.map(follower => follower.id)
           if(!users.includes(result.author.id)) {
             users.push(result.author.id)
@@ -22,6 +22,23 @@ module.exports = {
             link: `story/${result.id}`
           })
         }
+      }
+
+      catch(e) {}
+    },
+    async beforeUpdate(params,data) {
+      try {
+              const story=await strapi.query('user-story').findOne({id: params.id})
+              const userId= data.followers[data.followers.length-1]
+              if(story?.followers?.length < data?.followers?.length && story.author.id !== userId) {
+              const check= await strapi.query('user', 'users-permissions').findOne({id: userId})
+              await strapi.services['user-story-notification'].create({
+                  message: `${check.username} voted up your story`,
+                  users: [story.author],
+                  date: new Date(),
+                  link: `story/${story.id}`
+              })
+            }
       }
       catch(e) {}
     },
