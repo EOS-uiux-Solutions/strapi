@@ -1,0 +1,20 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/",
+      "handler": "okta.index",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/",
+      "handler": "okta.index",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
