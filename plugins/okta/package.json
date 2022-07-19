@@ -1,11 +1,11 @@
 {
-  "name": "strapi-plugin-my-plugin",
+  "name": "strapi-plugin-okta",
   "version": "0.0.0",
-  "description": "This is the description of the plugin.",
+  "description": "Integrate SSO with Okta on Strapi with this plugin.",
   "strapi": {
-    "name": "Okta",
+    "name": "okta",
     "icon": "plug",
-    "description": "Description of Okta plugin."
+    "description": "Description of okta plugin."
   },
   "dependencies": {},
   "author": {
@@ -15,9 +15,9 @@
   },
   "maintainers": [
     {
-      "name": "A Strapi developer",
+      "name": "EOS UX/UI Solutions",
       "email": "",
-      "url": ""
+      "url": "https://userstory.site"
     }
   ],
   "engines": {

@@ -5,7 +5,6 @@
  */
 
 import React, { memo } from "react";
-// import PropTypes from 'prop-types';
 import pluginId from "../../pluginId";
 import { Label, InputText } from "@buffetjs/core";
 import okta_logo from "../../assets/okta_logo.png";
@@ -15,9 +14,7 @@ const HomePage = () => {
 
   return (
     <div style={{ paddingLeft: "10%", paddingRight: "10%" }}>
-      <h1>
         <img src={okta_logo} width={100} />
-      </h1>
       <br />
 
       <Label htmlFor="clientid">

@@ -4,8 +4,6 @@ import App from './containers/App';
 import Initializer from './containers/Initializer';
 import lifecycles from './lifecycles';
 import trads from './translations';
-import InputMedia from './components/InputMedia';
-
 
 export default strapi => {
   const pluginDescription = pluginPkg.strapi.description || pluginPkg.description;
@@ -29,9 +27,6 @@ export default strapi => {
     preventComponentRendering: false,
     trads,
   };
-
-  // strapi.registerField({ type: 'media', Component: InputMedia });
-
 
   return strapi.registerPlugin(plugin);
 };

@@ -1,3 +1,3 @@
-# Strapi plugin my-plugin
+# Strapi plugin okta
 
-A quick description of my-plugin.
+A quick description of okta.
