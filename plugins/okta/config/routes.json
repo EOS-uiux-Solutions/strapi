@@ -3,18 +3,7 @@
     {
       "method": "GET",
       "path": "/",
-      "handler": "okta.index",
-      "config": {
-        "policies": []
-      }
-    },
-    {
-      "method": "GET",
-      "path": "/",
-      "handler": "okta.index",
-      "config": {
-        "policies": []
-      }
+      "handler": "okta.index"
     }
   ]
 }
