@@ -5,7 +5,7 @@ import Initializer from './containers/Initializer';
 import lifecycles from './lifecycles';
 import trads from './translations';
 
-export default strapi => {
+export default okta => {
   const pluginDescription = pluginPkg.strapi.description || pluginPkg.description;
 
   const plugin = {
@@ -28,5 +28,5 @@ export default strapi => {
     trads,
   };
 
-  return strapi.registerPlugin(plugin);
+  return okta.registerPlugin(plugin);
 };
