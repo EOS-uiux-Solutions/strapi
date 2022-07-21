@@ -2,7 +2,6 @@ import pluginPkg from '../../package.json';
 import pluginId from './pluginId';
 import App from './containers/App';
 import Initializer from './containers/Initializer';
-import lifecycles from './lifecycles';
 import trads from './translations';
 
 export default okta => {
@@ -19,7 +18,6 @@ export default okta => {
     isReady: false,
     isRequired: pluginPkg.strapi.required || false,
     layout: null,
-    lifecycles,
     leftMenuLinks: [],
     leftMenuSections: [],
     mainComponent: App,
