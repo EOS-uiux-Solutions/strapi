@@ -11,18 +11,21 @@
     "strapi": "strapi"
   },
   "dependencies": {
+    "koa-passport": "^4.1.4",
+    "koa-session": "^6.2.0",
+    "passport-openidconnect": "^0.1.1",
     "strapi": "3.0.1",
     "strapi-admin": "3.0.1",
     "strapi-connector-mongoose": "3.0.1",
     "strapi-plugin-content-manager": "3.0.1",
     "strapi-plugin-content-type-builder": "3.0.1",
-    "strapi-plugin-documentation": "^3.0.1",
+    "strapi-plugin-documentation": "3.0.1",
     "strapi-plugin-email": "3.0.1",
-    "strapi-plugin-graphql": "^3.0.1",
+    "strapi-plugin-graphql": "3.0.1",
     "strapi-plugin-upload": "3.0.1",
     "strapi-plugin-users-permissions": "3.0.1",
-    "strapi-provider-email-sendgrid": "^3.0.2",
-    "strapi-provider-upload-cloudinary": "^3.0.4",
+    "strapi-provider-email-sendgrid": "3.0.2",
+    "strapi-provider-upload-cloudinary": "3.0.4",
     "strapi-utils": "3.0.1"
   },
   "author": {
