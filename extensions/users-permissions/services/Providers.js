@@ -408,10 +408,9 @@ const getProfile = async (provider, query, callback) => {
 
       okta
       .get('userinfo')
-      .options({subdomain: 'dev-34603232'})
+      .options({subdomain: grant.okta.subdomain})
       .auth(access_token)
       .request((err, res, body) => {
-        console.log(body)
         if (err) {
           callback(err);
         } else {

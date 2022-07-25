@@ -11,9 +11,6 @@
     "strapi": "strapi"
   },
   "dependencies": {
-    "koa-passport": "^4.1.4",
-    "koa-session": "^6.2.0",
-    "passport-openidconnect": "^0.1.1",
     "strapi": "3.0.1",
     "strapi-admin": "3.0.1",
     "strapi-connector-mongoose": "3.0.1",
