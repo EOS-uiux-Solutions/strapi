@@ -52,7 +52,7 @@ module.exports = {
       entity = await strapi.services['user-story'].find(ctx.query);
     }
     if(ctx.query._limit || ctx.query._start){
-      entity = entity.slice(ctx.query._start,ctx.query._limit)
+      entity = entity.slice(ctx.query._start,Number(ctx.query._start)+Number(ctx.query._limit))
     }
     return entity.map(story => sanitizeEntity(story, { model: strapi.models['user-story'] }));
   }
