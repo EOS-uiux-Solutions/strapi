@@ -190,6 +190,7 @@ module.exports = {
         user: sanitizeEntity(user.toJSON ? user.toJSON() : user, {
           model: strapi.query('user', 'users-permissions').model,
         }),
+        jwt: token,
       });
     }
   },
