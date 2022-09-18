@@ -672,6 +672,9 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "access_role": {
+                "type": "string"
               }
             }
           }
