@@ -96,6 +96,9 @@
     "reports": {
       "via": "user",
       "collection": "user-story-reports"
+    },
+    "access_role":{
+      "collection": "user-story-role"
     }
   }
 }

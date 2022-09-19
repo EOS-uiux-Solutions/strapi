@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/user-story-notifications": {
+    "/user-story-roles": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -52,7 +52,7 @@
         },
         "summary": "",
         "tags": [
-          "User-story-notification"
+          "User-story-role"
         ],
         "parameters": [
           {
@@ -244,7 +244,7 @@
         },
         "summary": "",
         "tags": [
-          "User-story-notification"
+          "User-story-role"
         ],
         "requestBody": {
           "description": "",
@@ -252,14 +252,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewUser-story-notification"
+                "$ref": "#/components/schemas/NewUser-story-role"
               }
             }
           }
         }
       }
     },
-    "/user-story-notifications/count": {
+    "/user-story-roles/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -311,12 +311,12 @@
         },
         "summary": "",
         "tags": [
-          "User-story-notification"
+          "User-story-role"
         ],
         "parameters": []
       }
     },
-    "/user-story-notifications/{id}": {
+    "/user-story-roles/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -368,7 +368,7 @@
         },
         "summary": "",
         "tags": [
-          "User-story-notification"
+          "User-story-role"
         ],
         "parameters": [
           {
@@ -434,7 +434,7 @@
         },
         "summary": "",
         "tags": [
-          "User-story-notification"
+          "User-story-role"
         ],
         "requestBody": {
           "description": "",
@@ -442,7 +442,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewUser-story-notification"
+                "$ref": "#/components/schemas/NewUser-story-role"
               }
             }
           }
@@ -508,7 +508,7 @@
         },
         "summary": "",
         "tags": [
-          "User-story-notification"
+          "User-story-role"
         ],
         "parameters": [
           {
@@ -527,7 +527,7 @@
   },
   "components": {
     "schemas": {
-      "User-story-notification": {
+      "User-story-role": {
         "required": [
           "id"
         ],
@@ -535,200 +535,33 @@
           "id": {
             "type": "string"
           },
-          "message": {
+          "name": {
             "type": "string"
           },
-          "date": {
-            "type": "datetime"
-          },
-          "users": {
+          "permissions": {
             "required": [
-              "id",
-              "username",
-              "email"
+              "id"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "username": {
+              "name": {
                 "type": "string"
               },
-              "email": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "password": {
-                "type": "string"
-              },
-              "resetPasswordToken": {
-                "type": "string"
-              },
-              "confirmed": {
-                "type": "boolean"
-              },
-              "blocked": {
-                "type": "boolean"
-              },
-              "role": {
-                "type": "string"
-              },
-              "profilePicture": {
-                "type": "string"
-              },
-              "Bio": {
-                "type": "string"
-              },
-              "LinkedIn": {
-                "type": "string"
-              },
-              "Twitter": {
-                "type": "string"
-              },
-              "Name": {
-                "type": "string"
-              },
-              "Profession": {
-                "type": "string"
-              },
-              "Company": {
-                "type": "string"
-              },
-              "user_story_comments": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "user_stories": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "user_story_comment_replies": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "reports": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "access_role": {
+              "description": {
                 "type": "string"
               }
             }
-          },
-          "seenBy": {
-            "required": [
-              "id",
-              "username",
-              "email"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "username": {
-                "type": "string"
-              },
-              "email": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "password": {
-                "type": "string"
-              },
-              "resetPasswordToken": {
-                "type": "string"
-              },
-              "confirmed": {
-                "type": "boolean"
-              },
-              "blocked": {
-                "type": "boolean"
-              },
-              "role": {
-                "type": "string"
-              },
-              "profilePicture": {
-                "type": "string"
-              },
-              "Bio": {
-                "type": "string"
-              },
-              "LinkedIn": {
-                "type": "string"
-              },
-              "Twitter": {
-                "type": "string"
-              },
-              "Name": {
-                "type": "string"
-              },
-              "Profession": {
-                "type": "string"
-              },
-              "Company": {
-                "type": "string"
-              },
-              "user_story_comments": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "user_stories": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "user_story_comment_replies": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "reports": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "access_role": {
-                "type": "string"
-              }
-            }
-          },
-          "link": {
-            "type": "string"
           }
         }
       },
-      "NewUser-story-notification": {
+      "NewUser-story-role": {
         "properties": {
-          "message": {
+          "name": {
             "type": "string"
           },
-          "date": {
-            "type": "datetime"
-          },
-          "users": {
-            "type": "string"
-          },
-          "seenBy": {
-            "type": "string"
-          },
-          "link": {
+          "permissions": {
             "type": "string"
           }
         }

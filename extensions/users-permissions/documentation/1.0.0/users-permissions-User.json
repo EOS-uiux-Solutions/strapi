@@ -1529,6 +1529,22 @@
                 }
               }
             }
+          },
+          "access_role": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "permissions": {
+                "type": "string"
+              }
+            }
           }
         }
       },
@@ -1608,6 +1624,9 @@
             "items": {
               "type": "string"
             }
+          },
+          "access_role": {
+            "type": "string"
           }
         }
       }
