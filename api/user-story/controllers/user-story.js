@@ -28,8 +28,8 @@ module.exports = {
   async find(ctx) {
     let entity;
     let query = {...ctx.query};
-    delete query?._limit;
-    delete query?._start;
+    const { _limit, _start, ...rest } = query;
+    query = rest;
     if(ctx.query._sort==='followers:desc'){
      const result = await strapi.services['user-story'].find(query)
      const comparatorVotes = (a, b) => {
