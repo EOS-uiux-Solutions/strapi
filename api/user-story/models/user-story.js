@@ -28,17 +28,17 @@ module.exports = {
     },
     async beforeUpdate(params,data) {
       try {
-              const story=await strapi.query('user-story').findOne({id: params.id})
-              const userId= data.followers[data.followers.length-1]
-              if(story?.followers?.length < data?.followers?.length && story.author.id !== userId) {
-              const user= await strapi.query('user', 'users-permissions').findOne({id: userId})
-              await strapi.services['user-story-notification'].create({
-                  message: `${user.username} voted up your story`,
-                  users: [story.author],
-                  date: new Date(),
-                  link: `story/${story.id}`
-              })
-            }
+           const story=await strapi.query('user-story').findOne({id: params.id})
+           const userId= data.followers[data.followers.length-1]
+           if(story?.followers?.length < data?.followers?.length && story.author.id !== userId) {
+           const user= await strapi.query('user', 'users-permissions').findOne({id: userId})
+           await strapi.services['user-story-notification'].create({
+            message: `${user.username} voted up your story`,
+            users: [story.author],
+            date: new Date(),
+            link: `story/${story.id}`
+           })
+          }
       }
       catch(e) {}
     },
