@@ -62,6 +62,9 @@ Let's say that your project's name is `YOLO`. Instead of creating a content-type
 
 - [EOS Icons](https://eos-icons.com)
 
+- [EOS User Story](https://userstory.site)
+
 - [Follow us on Twitter](https://twitter.com/eos_uxui)
 
 - [Join us on Slack](https://slack.userstory.site)
+
