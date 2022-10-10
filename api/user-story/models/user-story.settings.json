@@ -47,8 +47,8 @@
       "via": "user_stories"
     },
     "user_story_status": {
-      "model": "user-story-status",
-      "via": "user_stories"
+      "via": "user_stories",
+      "model": "user-story-status"
     },
     "user_story_comments": {
       "via": "user_story",
