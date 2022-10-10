@@ -2,7 +2,7 @@
 
 ## Use cases
 
-This repository is a dependency to run the [EOS Design System](https://www.eosdesignsystem.com/) and [EOS Feature Request](https://jarvis.eosdesignsystem.com/)
+This repository is a dependency to run the [User Story](https://www.userstory.site)
 
 It contains all the models and routes necessary to manage either project independently, or both at the same time consuming the same [Strapi](https://strapi.io/).
 
@@ -58,12 +58,10 @@ Don't attempt to create content-types directly from your application served in H
 
 Let's say that your project's name is `YOLO`. Instead of creating a content-type `Library` choose a name like `YoloLibrary`.
 
-## Learn more about the EOS Design System
+## Learn more about the EOS UX/UI Solutions
 
-- [EOS Design System](https://www.eosdesignsystem.com/)
+- [EOS Icons](eos-icons.com)
 
-- [EOS Icons](icons.eosdesignsystem.com/)
+- [Follow us on Twitter](https://twitter.com/eos_uxui)
 
-- [Follow us on Twitter](https://twitter.com/eosdesignsystem)
-
-- [Join us in Slack](https://slack.eosdesignsystem.com/)
+- [Join us on Slack](https://slack.userstory.site)
