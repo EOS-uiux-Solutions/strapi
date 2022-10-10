@@ -14,8 +14,11 @@
       "required": true
     },
     "user_stories": {
-      "via": "user_story_status",
-      "collection": "user-story"
+      "collection": "user-story",
+      "via": "user_story_status"
+    },
+    "icon_name": {
+      "type": "string"
     }
   }
 }

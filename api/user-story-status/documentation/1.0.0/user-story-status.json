@@ -597,6 +597,9 @@
                 }
               }
             }
+          },
+          "icon_name": {
+            "type": "string"
           }
         }
       },
@@ -613,6 +616,9 @@
             "items": {
               "type": "string"
             }
+          },
+          "icon_name": {
+            "type": "string"
           }
         }
       }
