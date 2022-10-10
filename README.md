@@ -60,7 +60,7 @@ Let's say that your project's name is `YOLO`. Instead of creating a content-type
 
 ## Learn more about the EOS UX/UI Solutions
 
-- [EOS Icons](eos-icons.com)
+- [EOS Icons](https://eos-icons.com)
 
 - [Follow us on Twitter](https://twitter.com/eos_uxui)
 
