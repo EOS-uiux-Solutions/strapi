@@ -28,9 +28,6 @@
   "author": {
     "name": "EOS"
   },
-  "strapi": {
-    "uuid": "59f3a718-1a0c-40d7-a3f1-cbb1c160687b"
-  },
   "engines": {
     "node": "^14.15.4",
     "npm": "^6.14.10"
