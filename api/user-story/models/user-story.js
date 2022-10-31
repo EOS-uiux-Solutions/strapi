@@ -30,7 +30,7 @@ module.exports = {
           id: params.id
         })
         const userId = data.followers[data.followers.length - 1]
-        if (story?.followers?.length < data?.followers?.length && story.author.id !== userId) {
+        if (story.followers.length < data.followers.length && story.author.id !== userId) {
           const user = await strapi.query('user', 'users-permissions').findOne({
             id: userId
           })
