@@ -1,13 +1,14 @@
 import React, { memo } from 'react';
 import PropTypes from 'prop-types';
 import { LoadingBar } from 'strapi-helper-plugin';
+import '../../styles/blogpost.css';
 
 const BlogPost = ({ error, isFirst, isLoading, title, content, link }) => {
   if (isLoading) {
     return (
       <>
-        <LoadingBar style={{ marginBottom: 13 }} />
-        <LoadingBar style={{ width: '40%', marginBottom: 31 }} />
+        <LoadingBar className='loading-bar-one' />
+        <LoadingBar className='loading-bar-two' />
       </>
     );
   }
@@ -21,10 +22,10 @@ const BlogPost = ({ error, isFirst, isLoading, title, content, link }) => {
       rel="noopener noreferrer"
       target="_blank"
       href={`https://blog.strapi.io/${link}`}
-      style={{ color: '#333740' }}
+      className='link'
     >
       <h2>{title}</h2>
-      <p style={{ marginTop: 17, marginBottom: isFirst ? 32 : 10 }}>
+      <p className={isFirst ? 'blog-button-single' : 'blog-button-many'}>
         {content}
       </p>
     </a>

@@ -6,7 +6,7 @@ const useFetch = () => {
   const [state, setState] = useState({
     error: false,
     isLoading: true,
-    posts: [{ link: '1' }, { link: '2' }],
+    posts: [],
   });
 
   useEffect(() => {
